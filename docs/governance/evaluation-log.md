@@ -90,6 +90,7 @@ neue Reihenfolge.
 | E-071 | 2026-10-20 | Vorläufiger Wiki-Freeze wegen Pflege- und Kontextaufwand | Systembefund | umgesetzt mit Nacharbeit | Wiki-Relevanz später an einem konkreten Nutzungsszenario prüfen; bis dahin keine Routinepflege und keine Verlagerung in GitHub Wiki. |
 | E-072 | 2026-10-20 | Repository-first Research und Konzeptansatz für Designer-QA-Unterstützung | Systembefund | Vorschlag dokumentiert | Zuerst den im Review-Artefakt gesicherten systemischen Architekturabgleich (Quellen-/Statusmatrix, Rollen-/Arbeitsteilungsvertrag, aktive/historische Pfade, Migrations- und Ablöseplan) menschlich bewerten; erst danach darf ein read-only QA-Fall die Zielarchitektur validieren. |
 | E-073 | 2026-10-20 | Dev-ready Planung für das Designer-Assistenzsystem | Systembefund | Vorschlag dokumentiert | Die sechs realen Toggle-Varianten und ihre sichtbaren Definitionen sind gesichert; der Designer entscheidet als Nächstes zwischen fachlicher Bewertung und gezielter Collection-/Mode-/Property-Evidenz. |
+| E-074 | 2026-10-20 | Tiefenaudit, Anforderungsableitung und Operationalisierung | Systembefund | Vorschlag dokumentiert | Den Gate-basierten Arbeitsvertrag menschlich annehmen oder zurückweisen; erst danach D-009–D-016 und D-019/E-071 einzeln statusbereinigen. |
 
 **Redaktioneller Hinweis (2026-07-28):** E-038 trägt den zuvor doppelt als
 E-030 geführten Befund zur Regelpflege und Statussynchronisation. Die Kennung
@@ -2881,3 +2882,42 @@ Vergleichsmatrix, Evidenz und Grenzen bleiben im verlinkten Befund.
   aktuelle Zuweisung jetzt auf Basis der sechs sichtbaren Zustände und Werte
   bewerten, oder soll zuvor gezielt Collection-/Mode- und Property-Evidenz
   beschafft werden?
+
+### E-074 – Tiefenaudit, Anforderungsableitung und Operationalisierung
+
+- **Evidenz- und Toolingstatus:** Modus `Vorschlag` mit kontrolliertem
+  Repository-Rückfluss, Nutzungsebene `Systementwicklung` mit getrennt
+  ausgewiesener fachlicher Designerwirkung, Rollen `Architecture`,
+  `Governance`, `Review` und `Design`. Geprüft wurden die maßgeblichen
+  Repository-Quellen, Git-Historie und der öffentliche GitHub-Issuebestand
+  read-only.
+- **Gesicherter Systembefund:** Der tragfähige Kern ist der bestehende
+  repo-first Arbeitsvertrag `Designerfrage → Scope → kleinste Capability →
+  Evidenz → Befund → menschliche Decision → Repository-Nachweis`. Es fehlt
+  keine generische Agentenplattform; es fehlt eine schärfere Status-, Quellen-
+  und Übergangslogik.
+- **Gesicherte Anforderungen:** Designer:innen brauchen fachliche Frage,
+  konkreten Gegenstand, semantische Vergleichsbasis, funktionale Auswirkung,
+  sichtbare Evidenzgrenzen und genau eine nächste Entscheidung. Die Assistenz
+  darf strukturieren und prüfen, aber Bedeutung, Priorität, Freigabe und
+  Regelsetzung nicht ersetzen.
+- **Gesicherte Brüche:** D-009 bis D-016 werden praktisch referenziert,
+  obwohl sie `Entwurf` sind; D-019 und E-071 sind noch nicht reconciliert;
+  historische Roadmaps und aktuelle S0–S2-Pfade werden parallel gelesen; die
+  beiden Toggle-S2-Reviews sind überlappende historische Befunde und kein
+  belastbares Auditmuster.
+- **Issue-Abgleich:** Der öffentliche read-only-Abgleich ergab keine offenen
+  Issues. PR #1 ist gemergt und geschlossen. Es wurde kein Issue geschlossen,
+  neu angelegt oder umetikettiert.
+- **Repo-first-Rückfluss:** Der vollständige Befund mit Anforderungen,
+  Akzeptanzkriterien, Gates, deterministischen Prüfungen und Dispositionen
+  steht in
+  [`reviews/repo-deep-audit-and-operationalization-2026-10-20.md`](../../reviews/repo-deep-audit-and-operationalization-2026-10-20.md).
+- **Bewusst nicht übernommen:** Keine neue globale Regel, keine Decision-
+  Statusänderung, keine Figma-/Token-/Komponentenänderung, keine
+  Wiki-Reaktivierung, keine neue Runtime, keine künstliche Issue-Struktur und
+  keine weitere generische Toggle-Auditlogik.
+- **Ergebnis:** `Vorschlag dokumentiert`.
+- **Genau ein nächster menschlicher Entscheid:** Soll der vorgeschlagene
+  Gate-basierte Arbeitsvertrag als Konsolidierungsgrundlage angenommen werden,
+  bevor D-009–D-016 und D-019/E-071 einzeln statusbereinigt werden?
