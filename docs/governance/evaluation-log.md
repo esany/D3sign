@@ -89,7 +89,7 @@ neue Reihenfolge.
 | E-070 | 2026-08-04 | Standprüfung V5 gegen Kriterien, Lean-Nutzen und Komponenten-Best-Practice | Kurzprüfung | nicht bestanden / begrenzt verwertbar | V5 als Befundträger behalten, aber nicht als bestandene Button-Komponente oder finales Doku-Template nutzen; nächster Schritt bleibt ein reiner V6-Komponentenbau ohne Dokumentationsflächen. |
 | E-071 | 2026-10-20 | Vorläufiger Wiki-Freeze wegen Pflege- und Kontextaufwand | Systembefund | umgesetzt mit Nacharbeit | Wiki-Relevanz später an einem konkreten Nutzungsszenario prüfen; bis dahin keine Routinepflege und keine Verlagerung in GitHub Wiki. |
 | E-072 | 2026-10-20 | Repository-first Research und Konzeptansatz für Designer-QA-Unterstützung | Systembefund | Vorschlag dokumentiert | Zuerst den im Review-Artefakt gesicherten systemischen Architekturabgleich (Quellen-/Statusmatrix, Rollen-/Arbeitsteilungsvertrag, aktive/historische Pfade, Migrations- und Ablöseplan) menschlich bewerten; erst danach darf ein read-only QA-Fall die Zielarchitektur validieren. |
-| E-073 | 2026-10-20 | Dev-ready Planung für das Designer-Assistenzsystem | Systembefund | Vorschlag dokumentiert | S1 ist als Grundlage weitergeführt; der Toggle-Variablenbefund ist als partieller Designerbefund gesichert, bevor weitere Variant-Nodes und Collection-/Mode-Evidenz geprüft werden. |
+| E-073 | 2026-10-20 | Dev-ready Planung für das Designer-Assistenzsystem | Systembefund | Vorschlag dokumentiert | Die sechs realen Toggle-Varianten und ihre sichtbaren Definitionen sind gesichert; der Designer entscheidet als Nächstes zwischen fachlicher Bewertung und gezielter Collection-/Mode-/Property-Evidenz. |
 
 **Redaktioneller Hinweis (2026-07-28):** E-038 trägt den zuvor doppelt als
 E-030 geführten Befund zur Regelpflege und Statussynchronisation. Die Kennung
@@ -2846,3 +2846,38 @@ Vergleichsmatrix, Evidenz und Grenzen bleiben im verlinkten Befund.
 - **Genau ein nächster Schritt:** Die relevanten Variant-Nodes des Toggles
   einzeln prüfen und Property-/Variant- sowie Collection-/Mode-Evidenz getrennt
   nachweisen.
+
+#### S2-Anschluss: Variantenzustände und semantische Variablenzuordnung
+
+- **Evidenz- und Toolingstatus:** Modus `Pilot`, Nutzungsebene
+  `Systementwicklung` mit getrennter fachlicher Wirkung, Rollen `Design`,
+  `Development` und `Review`. Der Component-Set-Context, die sechs realen
+  Variant-Nodes und die Variablendefinitionen jedes Nodes wurden read-only
+  abgerufen.
+- **Gesicherter Struktur-Befund:** `Atoms / Toggle Switch` besitzt genau die
+  Achsen `Active` (`on`/`off`), `Enabled` (`off`/`on`) und `Hover` (`off`/`on`).
+  Vorhanden sind genau sechs Kombinationen: `on/on/off`, `on/on/on`,
+  `on/off/off`, `off/on/off`, `off/on/on` und `off/off/off`.
+- **Gesicherter Werte-Befund:** Die Variant-Nodes geben die Definitionen
+  `toggle/themed/handle`, `toggle/themed/bg`, `toggle/themed/bg-hover`,
+  `toggle/themed/handle-disabled`, `toggle/themed/bg-disabled` und
+  `primary/white` mit den im Review-Artefakt sichtbaren Hex-/Alpha-Werten
+  zurück. `Drop Shadow/2` ist an allen sechs Nodes gleich sichtbar.
+- **Evidenzgrenze:** Die verwendeten Read-only-Funktionen lösen die konkrete
+  Figma-Property von Track/Handle sowie Collection und Mode nicht aus. Daher
+  wird weder aus dem Variablennamen eine semantische Passfähigkeit noch aus
+  `Enabled=off` automatisch die Bezeichnung „disabled“ abgeleitet.
+- **Rollenbefund:** Figma zeigt Struktur und Werte; die Assistenz ordnet und
+  kennzeichnet Grenzen; der bestehende Vertrag liefert die Vergleichsbasis;
+  der Designer bewertet Bedeutung, Passfähigkeit und Konsequenz.
+- **Repo-first-Rückfluss:** Der vollständige Anschlussbefund steht in
+  [`reviews/s2-toggle-variant-audit-2026-10-20.md`](../../reviews/s2-toggle-variant-audit-2026-10-20.md).
+- **Bewusst nicht übernommen:** Keine Figma-Änderung, keine neue Token- oder
+  Komponentenstruktur, keine fachliche Decision, keine automatische
+  Pass-/Fail- oder Accessibility-Aussage, keine Wiki-Änderung.
+- **Ergebnis:** `Variantenzustände und sichtbare Definitionen dokumentiert;
+  fachliche Mapping-Bewertung offen`.
+- **Genau ein nächster menschlicher Entscheid:** Soll der Designer die
+  aktuelle Zuweisung jetzt auf Basis der sechs sichtbaren Zustände und Werte
+  bewerten, oder soll zuvor gezielt Collection-/Mode- und Property-Evidenz
+  beschafft werden?
