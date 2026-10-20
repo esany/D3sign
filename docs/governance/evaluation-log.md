@@ -87,6 +87,8 @@ neue Reihenfolge.
 | E-068 | 2026-07-31 | Sicherung Komponentenpilot-Learning: Aufbaustufe, Generation und Dokumentationsgrenze | Kurzprüfung | bestanden mit Nacharbeit | Beim nächsten Figma-Prompt zuerst Aufbaustufe, Generation und Mindestgegenstand prüfen; keine neue Skill- oder Template-Datei ohne belegten Wiederholungsnutzen anlegen. |
 | E-069 | 2026-08-03 | V5-Review-Rückfluss: Kriterien und Tests für reinen Komponentenbau | Kurzprüfung | bestanden mit Nacharbeit | Beim nächsten reinen Komponentenbau-Test das neue Prüfgate anwenden; erst nach bestandenem Test über Regelsetzung oder weitere Verdichtung entscheiden. |
 | E-070 | 2026-08-04 | Standprüfung V5 gegen Kriterien, Lean-Nutzen und Komponenten-Best-Practice | Kurzprüfung | nicht bestanden / begrenzt verwertbar | V5 als Befundträger behalten, aber nicht als bestandene Button-Komponente oder finales Doku-Template nutzen; nächster Schritt bleibt ein reiner V6-Komponentenbau ohne Dokumentationsflächen. |
+| E-071 | 2026-10-20 | Vorläufiger Wiki-Freeze wegen Pflege- und Kontextaufwand | Systembefund | umgesetzt mit Nacharbeit | Wiki-Relevanz später an einem konkreten Nutzungsszenario prüfen; bis dahin keine Routinepflege und keine Verlagerung in GitHub Wiki. |
+| E-072 | 2026-10-20 | Repository-first Research und Konzeptansatz für Designer-QA-Unterstützung | Systembefund | Vorschlag dokumentiert | Zuerst den im Review-Artefakt gesicherten systemischen Architekturabgleich (Quellen-/Statusmatrix, Rollen-/Arbeitsteilungsvertrag, aktive/historische Pfade, Migrations- und Ablöseplan) menschlich bewerten; erst danach darf ein read-only QA-Fall die Zielarchitektur validieren. |
 
 **Redaktioneller Hinweis (2026-07-28):** E-038 trägt den zuvor doppelt als
 E-030 geführten Befund zur Regelpflege und Statussynchronisation. Die Kennung
@@ -2583,3 +2585,93 @@ Vergleichsmatrix, Evidenz und Grenzen bleiben im verlinkten Befund.
   nächsten Versuch als `V6 – reiner Komponentenbau` mit E-069-Gate ausführen:
   nur Component Set, Anatomy, Properties, Varianten, Override-Stabilität und
   Sichttest; keine Dokumentationsframes.
+
+### E-071 – Vorläufiger Wiki-Freeze wegen Pflege- und Kontextaufwand
+
+- **Evidenz- und Toolingstatus:** Modus `Umsetzen` mit anschließendem
+  `Status sichern`, Nutzungsebene `Systementwicklung`, Rollen `Governance` und
+  `Review`. Grundlage sind die Repository-Inventur, die bestehende Trennung
+  von `AGENTS.md`, `docs/` und `wiki/` sowie der Chat-Audit zur Toggle-
+  Tokenmigration. Die Wiki wurde nicht verschoben oder gelöscht.
+- **Befund:** Die Wiki umfasst mehrere erklärende Seiten und überschneidet sich
+  teilweise mit operativen Regeln, Evaluation und Governance. Zusammen mit
+  `AGENTS.md`, `docs/` und historischen Logs entsteht ein zu großer Kontext
+  für Mensch und Maschine. Die Pflicht zur gleichzeitigen Wiki-Pflege
+  bei relevanten Änderungen erzeugt zusätzlichen Synchronisationsaufwand.
+- **Umgesetzte Anpassung:** `wiki/README.md` trägt den sichtbaren Status
+  `Pflege pausiert`. `AGENTS.md` und `docs/README.md` behandeln die Wiki nur
+  noch als optionale Einordnung; Detailseiten werden nur bei ausdrücklichem
+  Auftrag oder begründeter Relevanz geladen. Neue operative Inhalte werden
+  ausschließlich in den zuständigen `docs/`- und Governance-Quellen geführt.
+- **Bewusst nicht übernommen:** Keine Wiki-Datei wurde gelöscht, verschoben
+  oder in eine GitHub-Wiki migriert. Keine neue bestätigte Decision, keine
+  inhaltliche Wiki-Überarbeitung und keine Änderung an Figma-Artefakten.
+- **Status und Grenze:** Der Freeze ist ein vorläufiger Arbeitsstatus, keine
+  abschließende Architekturentscheidung. Die Wiki bleibt als Bestand und
+  möglicher Kontext erhalten, ist aber keine Standardquelle für Routinearbeit.
+- **Ergebnis:** `umgesetzt mit Nacharbeit`.
+- **Genau ein nächster Schritt:** Die Relevanz der Wiki an einem konkreten
+  menschlichen Nutzungsszenario prüfen und danach über Beibehalten,
+  Verdichten, Archivieren oder vollständige Ablösung entscheiden.
+
+### E-072 – Repository-first Research und Konzeptansatz für Designer-QA-Unterstützung
+
+- **Evidenz- und Toolingstatus:** Modus `Vorschlag` mit anschließendem
+  `Status sichern`, Nutzungsebene verbunden (`Fachliche Nutzung` und
+  `Systementwicklung`), Rollen `Review` und `Governance` mit fachlichem Fokus
+  `Design`. Zuerst wurden die Repository-Quellen und die aktuellen Reviews
+  ausgewertet; danach wurden offizielle Figma-, MCP-, OpenAI-Agents- und
+  W3C-Quellen für den begrenzten externen Research herangezogen. Es wurden
+  keine Figma- oder externen Schreibfunktionen verwendet.
+- **Gesicherter Befund:** Das Repository enthält bereits die wesentlichen
+  Designer-Anforderungen: fachliche Entscheidungshoheit, Design-Rationale,
+  Zustände, Tokens, Accessibility, verständliche Toolgrenzen, Evidenzstatus
+  und menschliche Abnahme. Der Designer ist fachlicher Eigentümer und kein
+  technischer QA-Eingabegeber. Der Agent unterstützt bei Kontext, Evidenz,
+  Strukturierung und Vorschlägen.
+- **Zentrale Bedingung:** Die Arbeitsteilung folgt
+  `fachliche Frage → minimale Quelle → passende Funktion → Evidenzstatus →
+  begrenzte Ableitung → menschliche Entscheidung`. Ohne fachliche Frage darf
+  kein Tool den Scope definieren; ohne Evidenz darf keine Bedeutung behauptet
+  werden; ohne menschliche Bewertung entsteht keine Regel oder Freigabe.
+- **Architektur-Befund:** Der aktuelle Kern ist eine fachliche
+  Designer-QA-Unterstützung mit Figma als Evidenzquelle und dem Repository als
+  Nachweis- und Lernschicht. Code Connect, Design-to-Code, Produktionscode,
+  Synchronisation, Multi-Agenten-Orchestrierung und zusätzliche Infrastruktur
+  gehören nicht zum aktuellen Zielumfang.
+- **Externer Research:** Die offiziellen Quellen stützen eine Trennung von
+  Host/Client/Server, expliziter Toolfreigabe, Guardrails, Human-in-the-loop
+  und Tracing. Figma beschreibt read-only Designkontext, Screenshots und
+  Variablen als verfügbare Evidenz; Canvas-Schreiben bleibt Beta, edit- und
+  planabhängig sowie manuell zu prüfen. Diese Fähigkeiten werden nicht als
+  aktuelle Infrastruktur übernommen, sondern als Grenz- und Vergleichswissen
+  geführt. Die Quellen und Übertragbarkeitsgrenzen stehen im Review-Artefakt.
+- **Repo-first-Rückfluss:** Der vollständige Befund und Konzeptansatz steht in
+  [`reviews/qa-architecture-research-2026-10-20.md`](../../reviews/qa-architecture-research-2026-10-20.md).
+  Das Artefakt enthält nun zusätzlich das repo-spezifische Zielbild, die
+  funktionalen und nichtfunktionalen Anforderungen, Zustands-/Freigabelogik,
+  Systemgrenze und offenen Architekturentscheidungen. Es ist ein
+  unverbindlicher Vorschlag; es wurde keine neue kanonische Architekturdatei
+  und keine Decision erzeugt. Der Chat ist damit nicht die alleinige
+  Wissensquelle.
+- **Bewusst nicht übernommen:** Keine Änderung an Figma, keine neue
+  Toolkonfiguration, kein Agenten-SDK, kein Code Connect, kein Design-to-Code,
+  keine Wiki-Reaktivierung und keine Bestätigung bisheriger Entwurfs-
+  entscheidungen.
+- **Status und Grenze:** Der Konzeptansatz ist ein Review- und
+  Systementwicklungsbefund. Die Statusüberlagerungen D-009 bis D-016, D-019
+  gegenüber E-071 und die historische v0.1/v0.2/v0.3-Staffelung bleiben offene
+  Bereinigungsentscheidungen.
+- **Ergebnis:** `Vorschlag dokumentiert`.
+- **Korrigierter Anschluss:** Die zunächst naheliegende Empfehlung eines
+  unmittelbaren einzelnen Designer-QA-Falls wird nicht übernommen. Sie würde
+  den Systemumbau auf eine lokale Probe verengen, bevor Quellenautorität,
+  Statusüberlagerungen, Rollenarbeitsteilung und Ablösepfade geklärt sind.
+  Das Review-Artefakt formuliert deshalb zuerst ein aus dem vorhandenen
+  Material abgeleitetes Zielbild mit prüfbaren Anforderungen und klarer
+  Zustands-/Freigabelogik.
+- **Genau ein nächster Schritt:** Einen systemischen Architekturabgleich
+  durchführen: Quellen- und Statusmatrix, Rollen-/Arbeitsteilungsvertrag,
+  aktive und historische Pfade sowie ein behutsamer Migrations- und
+  Ablöseplan. Erst nach menschlicher Bewertung dieses Abgleichs darf ein
+  read-only Pilot als Validierung der Zielarchitektur beauftragt werden.

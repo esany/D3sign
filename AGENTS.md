@@ -113,7 +113,9 @@ weder Scope noch Entscheidungsrecht.
 `AGENTS.md` ist der Arbeitsvertrag, nicht das Projektarchiv. Vor einer neuen
 oder wiederaufgenommenen Arbeit übernimmt und bestimmt der Agent den
 erkennbaren Anliegen- und Arbeitsstand samt Nutzungsebene selbst: bei
-`Fachliche Nutzung` liest er zuerst `wiki/README.md`, bei
+`Fachliche Nutzung` liest er zunächst `wiki/README.md` nur zur Einordnung; die
+Wiki-Detailseiten werden wegen der pausierten Pflege nur bei ausdrücklichem
+Wiki-Auftrag oder begründeter Relevanz geladen. Bei
 `Systementwicklung` zuerst `docs/README.md`, bei verbundenem Anliegen beide
 Ebenen getrennt. Ist kein Anliegen ableitbar, liest er automatisch beide
 Einstiegskarten und kennzeichnet die Einordnung als vorläufig, statt eine
@@ -148,8 +150,9 @@ Die Wiki vermittelt Menschen Zweck, Kontext, Status, Wirkung, Rollen,
 Entscheidungen und nächste Schritte; sie folgt menschlichen Fragen und
 verweist auf verbindliche Detailquellen. `docs/` enthält ausführbare Regeln,
 Prüfschritte und maschinenlesbare Statuswerte. Keine operative Regel wird in
-der Wiki dupliziert. Nach folgenreichen Änderungen wird die betroffene Wiki-
-Einordnung im selben Arbeitsschritt aktualisiert.
+der Wiki dupliziert. Die Wiki-Pflege ist vorläufig pausiert: Routineänderungen
+lösen keine Wiki-Aktualisierung aus. Eine Wiki-Änderung erfolgt nur bei einem
+ausdrücklichen Wiki-Auftrag oder nach einer gezielten Relevanzprüfung.
 
 Bei Wiki- oder Strukturänderungen gilt `WIKI PRÜFEN`: Zweck, Zielgruppe,
 selektives Lesen, Status, Rollenpassung, semantische Auszeichnung,

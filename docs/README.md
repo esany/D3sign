@@ -2,7 +2,15 @@
 
 Diese Dokumentation ist die präzise Arbeitsgrundlage für Agenten und für
 gezielte fachliche Nachweise. Die menschliche Einordnung steht getrennt in der
-[Projekt-Wiki](../wiki/README.md).
+vorläufig pausierten [Projekt-Wiki](../wiki/README.md); verbindliche Regeln
+stehen ausschließlich in den zuständigen `docs/`- und Governance-Quellen.
+
+## Status der Wiki
+
+Die Wiki bleibt als bestehender Kontext erhalten, wird aber bis zu einer
+späteren Relevanzprüfung nicht routinemäßig gepflegt oder vollständig geladen.
+Neue Regeln, Statuswerte und Arbeitsabläufe werden ausschließlich in den
+zuständigen Quellen unter `docs/` und in `AGENTS.md` geführt.
 
 | Bereich | Zweck | Artefakte |
 |---|---|---|
@@ -21,7 +29,7 @@ Regel- und Toolingsystems gleichgesetzt wird.
 
 | Gegenstand | Verbindliche Quelle | Kernfunktion | Abnahme |
 |---|---|---|---|
-| Fachliche Nutzung | Wiki plus referenzierte Foundations/Standards | Zweck, Wirkung, Grenzen und Einordnung im Arbeitsprozess vermitteln. | verständlich, selektiv lesbar und fachlich einordenbar |
+| Fachliche Nutzung | `AGENTS.md` plus gezielt geladene Wiki-Einordnung und referenzierte Foundations/Standards | Zweck, Wirkung, Grenzen und Einordnung im Arbeitsprozess vermitteln. | verständlich, selektiv lesbar und fachlich einordenbar |
 | Systementwicklung | Governance, Operations und Tooling | Regeln, Quellen, Tooling und Dokumentationsstrukturen reproduzierbar prüfen oder ändern. | Quelle, Scope, Freigabe, Test und Rückführung prüfbar |
 | Arbeitsauftrag | Prompting Guide | Ziel, Gegenstand, Modus, Rolle, Aktion, Grenzen und Abnahme explizit machen. | kein entscheidender Kontext bleibt implizit |
 | Qualitätsnachweis | Evaluation Framework und Log | Tooling-, Struktur-, Fach- und Menschenbefund getrennt ausweisen. | Umfang, Evidenz, Lücken und nächster Schritt belastbar |
@@ -35,11 +43,11 @@ Freigabe.
 
 | Anliegen | Minimaler Kontext | Danach nur bei Bedarf | Bewusst nicht lesen |
 |---|---|---|---|
-| Konkrete Qualitäts- oder Komponentenfrage | `AGENTS.md` → [Wiki-README](../wiki/README.md) → passender Qualitätsweg | Foundations, Figma-/Tooling-Quelle, konkrete Evaluation | übrige Logs und fachfremde Tooling-Details |
+| Konkrete Qualitäts- oder Komponentenfrage | `AGENTS.md` → [Wiki-README](../wiki/README.md) nur zur Einordnung → passender Qualitätsweg | Foundations, Figma-/Tooling-Quelle, konkrete Evaluation | Wiki-Detailseiten, übrige Logs und fachfremde Tooling-Details |
 | Systementwicklung, Regel oder Tooling | `AGENTS.md` → diese Übersicht → passende Decision oder Evaluation | Checklists, Prompting Guide, Tooling-Detailquelle | Wiki- und Foundations-Details ohne Bezug |
-| Fortsetzung eines folgenreichen Strangs | `AGENTS.md` → letzter relevanter Befund → zugehörige Decision | [Projektbild](../wiki/project-portrait.md) und verlinkte Detailquelle | vollständige Historie ohne Bezug |
-| Verbundenes Anliegen | `AGENTS.md` → Wiki-README und diese Übersicht | je Ebene passende Qualitätsquelle sowie Decision/Evaluation | Vermischung der Evidenz, Abnahme oder Entscheidung beider Ebenen |
-| Neues oder unklares Anliegen | `AGENTS.md` → [Wiki-README](../wiki/README.md) und diese Übersicht | nach Einordnung nur passende Quellen | Volllektüre von Wiki, `docs/` oder Logs |
+| Fortsetzung eines folgenreichen Strangs | `AGENTS.md` → letzter relevanter Befund → zugehörige Decision | gezielte Detailquelle; Wiki-Detailseiten nur bei ausdrücklicher Relevanz | vollständige Historie ohne Bezug |
+| Verbundenes Anliegen | `AGENTS.md` → Wiki-README nur zur Einordnung und diese Übersicht | je Ebene passende Qualitätsquelle sowie Decision/Evaluation | Vermischung der Evidenz, Abnahme oder Entscheidung beider Ebenen |
+| Neues oder unklares Anliegen | `AGENTS.md` → [Wiki-README](../wiki/README.md) nur zur Einordnung und diese Übersicht | nach Einordnung nur passende Quellen | Volllektüre von Wiki, `docs/` oder Logs |
 
 Der Agent sucht nach Gegenstand, Decision, Evaluation oder Stichwort und
 liest erst dann die Fundstelle. Bei einer folgenreichen Fortsetzung dient der
