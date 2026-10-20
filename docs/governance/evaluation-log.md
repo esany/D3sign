@@ -89,7 +89,7 @@ neue Reihenfolge.
 | E-070 | 2026-08-04 | Standprüfung V5 gegen Kriterien, Lean-Nutzen und Komponenten-Best-Practice | Kurzprüfung | nicht bestanden / begrenzt verwertbar | V5 als Befundträger behalten, aber nicht als bestandene Button-Komponente oder finales Doku-Template nutzen; nächster Schritt bleibt ein reiner V6-Komponentenbau ohne Dokumentationsflächen. |
 | E-071 | 2026-10-20 | Vorläufiger Wiki-Freeze wegen Pflege- und Kontextaufwand | Systembefund | umgesetzt mit Nacharbeit | Wiki-Relevanz später an einem konkreten Nutzungsszenario prüfen; bis dahin keine Routinepflege und keine Verlagerung in GitHub Wiki. |
 | E-072 | 2026-10-20 | Repository-first Research und Konzeptansatz für Designer-QA-Unterstützung | Systembefund | Vorschlag dokumentiert | Zuerst den im Review-Artefakt gesicherten systemischen Architekturabgleich (Quellen-/Statusmatrix, Rollen-/Arbeitsteilungsvertrag, aktive/historische Pfade, Migrations- und Ablöseplan) menschlich bewerten; erst danach darf ein read-only QA-Fall die Zielarchitektur validieren. |
-| E-073 | 2026-10-20 | Dev-ready Planung für das Designer-Assistenzsystem | Systembefund | Vorschlag dokumentiert | S1 ist als Grundlage weitergeführt; vor S2 muss eine konkrete read-only-Figma-Capability mit Integrationsfreigabe festgelegt werden. |
+| E-073 | 2026-10-20 | Dev-ready Planung für das Designer-Assistenzsystem | Systembefund | Vorschlag dokumentiert | S1 ist als Grundlage weitergeführt; vor S2 muss `figma_get_metadata` für einen konkreten read-only-File-/Node-Scope mit Integrationsfreigabe festgelegt werden. |
 
 **Redaktioneller Hinweis (2026-07-28):** E-038 trägt den zuvor doppelt als
 E-030 geführten Befund zur Regelpflege und Statussynchronisation. Die Kennung
@@ -2796,3 +2796,27 @@ Vergleichsmatrix, Evidenz und Grenzen bleiben im verlinkten Befund.
 - **Genau ein nächster Schritt:** Eine konkrete read-only-Figma-Capability mit
   Scope, Berechtigung, Datenklasse und Abnahme für S2 festlegen. Bis dahin
   bleibt S2 gesperrt.
+
+#### S2-Anschluss: Read-only-Figma-Capability-Readiness
+
+- **Evidenz- und Toolingstatus:** Modus `Pilot`, Nutzungsebene
+  `Systementwicklung` mit fachlicher Nutzung als getrennte Wirkungsebene,
+  Rollen `Development`, `Review` und `Governance`. Die sichtbaren Figma-
+  Tooldefinitionen wurden lokal abgeglichen; kein Figma-Tool wurde aufgerufen.
+- **Gesicherter Kandidat:** `figma_get_metadata` für einen vom Menschen
+  benannten File-/Node-Scope. Erwartet werden E1-Strukturmetadaten; Screenshot,
+  Variablen, Design-Context und Schreiboperationen sind nicht Bestandteil.
+- **Readinessstatus:** `nicht getestet`, `nicht freigegeben`. Die sichtbare
+  Werkzeugoberfläche ist kein Nachweis für Zugriff, Plan, Seat, Datenklasse
+  oder erfolgreiche Ausführung.
+- **Synthetische Validierung:** Ein begrenzter Auftrag, fehlender Scope und
+  unzulässige fachliche Ableitung wurden als Stopps und Befundgrenzen geprüft.
+- **Repo-first-Rückfluss:** Der vollständige S2-Vorbereitungsbefund steht in
+  [`reviews/s2-capability-readiness-2026-10-20.md`](../../reviews/s2-capability-readiness-2026-10-20.md).
+- **Bewusst nicht übernommen:** Kein Figma-Aufruf, kein File-/Node-Zugriff,
+  kein Capability-Register, keine neue Regel, keine Decision, keine Runtime,
+  keine Schema-Datei, keine Wiki-Änderung und kein S3-Lauf.
+- **Ergebnis:** `S2-Kandidat dokumentiert`.
+- **Genau ein nächster Schritt:** `figma_get_metadata` für einen konkreten
+  File-/Node-Scope mit Datenklasse, Berechtigung und Abnahme menschlich
+  freigeben oder zurückweisen. Bis dahin bleibt S2 gesperrt.
