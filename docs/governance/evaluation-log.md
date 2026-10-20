@@ -89,7 +89,7 @@ neue Reihenfolge.
 | E-070 | 2026-08-04 | Standprüfung V5 gegen Kriterien, Lean-Nutzen und Komponenten-Best-Practice | Kurzprüfung | nicht bestanden / begrenzt verwertbar | V5 als Befundträger behalten, aber nicht als bestandene Button-Komponente oder finales Doku-Template nutzen; nächster Schritt bleibt ein reiner V6-Komponentenbau ohne Dokumentationsflächen. |
 | E-071 | 2026-10-20 | Vorläufiger Wiki-Freeze wegen Pflege- und Kontextaufwand | Systembefund | umgesetzt mit Nacharbeit | Wiki-Relevanz später an einem konkreten Nutzungsszenario prüfen; bis dahin keine Routinepflege und keine Verlagerung in GitHub Wiki. |
 | E-072 | 2026-10-20 | Repository-first Research und Konzeptansatz für Designer-QA-Unterstützung | Systembefund | Vorschlag dokumentiert | Zuerst den im Review-Artefakt gesicherten systemischen Architekturabgleich (Quellen-/Statusmatrix, Rollen-/Arbeitsteilungsvertrag, aktive/historische Pfade, Migrations- und Ablöseplan) menschlich bewerten; erst danach darf ein read-only QA-Fall die Zielarchitektur validieren. |
-| E-073 | 2026-10-20 | Dev-ready Planung für das Designer-Assistenzsystem | Systembefund | Vorschlag dokumentiert | Den S0-Reconciliation-Befund menschlich bewerten und die vorgeschlagene Autoritäts-/Statusmatrix sowie den Übergang zu S1 freigeben oder zurückweisen; erst danach einen Umsetzungsslice öffnen. |
+| E-073 | 2026-10-20 | Dev-ready Planung für das Designer-Assistenzsystem | Systembefund | Vorschlag dokumentiert | Den S1-Pilotvertrag menschlich bewerten und über Weiterführung, Reduktion oder Verwerfung entscheiden; erst danach S2/S3 als neuen Umsetzungsschritt freigeben. |
 
 **Redaktioneller Hinweis (2026-07-28):** E-038 trägt den zuvor doppelt als
 E-030 geführten Befund zur Regelpflege und Statussynchronisation. Die Kennung
@@ -2757,6 +2757,38 @@ Vergleichsmatrix, Evidenz und Grenzen bleiben im verlinkten Befund.
   keine Ablösung von D-019, keine Aktivierung der Base-Template-Roadmap, keine
   Wiki-Reaktivierung, keine Figma-Integration und keine Runtime-Entscheidung.
 - **Ergebnis:** `Vorschlag dokumentiert`.
-- **Genau ein nächster Schritt:** Die vorgeschlagene Autoritäts-/Statusmatrix
-  und die Grenzen für S1 menschlich akzeptieren oder zurückweisen. Bis dahin
-  bleibt S1 nicht freigegeben.
+- **Genau ein nächster Schritt zum Abschluss von S0:** Die vorgeschlagene
+  Autoritäts-/Statusmatrix und die Grenzen für S1 menschlich akzeptieren oder
+  zurückweisen. Der spätere S1-Pilot und seine Freigabe sind im Anschluss
+  dokumentiert.
+
+#### S1-Anschluss: Pilotvertrag für Arbeitsauftrag und Befund
+
+- **Evidenz- und Toolingstatus:** Modus `Pilot`, Nutzungsebene
+  `Systementwicklung` mit getrennt berücksichtigter fachlicher Nutzung,
+  Rollen `Development`, `Review` und `Governance`. Der S0-Stand wurde
+  als akzeptierte Arbeitsgrundlage verwendet. Es wurden keine Figma-, externen
+  oder schreibenden Toolfunktionen verwendet.
+- **Gesicherter Pilotbefund:** Die bestehende Governance lässt sich in die
+  fünf vorläufigen Objekte `WorkRequest`, `EvidencePacket`, `Finding`,
+  `Decision` und `RunRecord` sowie einen begrenzten Zustandslebenszyklus
+  übersetzen. Fehlender Scope, fehlende Evidenz und fehlende menschliche
+  Entscheidung können getrennt stoppen.
+- **Pilotgrenze:** Die Objekte, Statuswerte und eingebettete YAML-Struktur
+  sind ausschließlich Kandidaten in einer Review-Datei. Es wurde keine
+  kanonische Schema-Datei, keine neue globale Regel und keine Decision
+  erzeugt. D-009 bis D-016 bleiben offen.
+- **Synthetische Validierung:** Drei Fälle prüfen einen ausreichend geklärten
+  Auftrag, fehlenden Scope und Evidenz ohne menschliche Entscheidung. Ein
+  echter Designerfall, Figma-Zugriff, externe Daten und Schreibaktionen waren
+  nicht Bestandteil des Pilots.
+- **Repo-first-Rückfluss:** Der vollständige Pilotvertrag steht in
+  [`reviews/s1-work-and-finding-contract-2026-10-20.md`](../../reviews/s1-work-and-finding-contract-2026-10-20.md).
+  Der Chat bleibt nicht die alleinige Wissensquelle.
+- **Bewusst nicht übernommen:** Kein JSON-Schema als kanonische Datei, keine
+  Runtime, kein SDK, kein MCP-Server, keine Figma-Capability, keine Wiki-
+  Änderung und keine automatische fachliche oder Accessibility-Abnahme.
+- **Ergebnis:** `Pilot dokumentiert`.
+- **Genau ein nächster Schritt:** Den Pilotvertrag menschlich bewerten und
+  über Weiterführung, Reduktion oder Verwerfung entscheiden. Erst danach darf
+  S2 oder S3 als neuer Umsetzungsschritt beauftragt werden.
