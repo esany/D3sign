@@ -2801,8 +2801,9 @@ Vergleichsmatrix, Evidenz und Grenzen bleiben im verlinkten Befund.
 
 - **Evidenz- und Toolingstatus:** Modus `Pilot`, Nutzungsebene
   `Systementwicklung` mit fachlicher Nutzung als getrennte Wirkungsebene,
-  Rollen `Development`, `Review` und `Governance`. Die sichtbaren Figma-
-  Tooldefinitionen wurden lokal abgeglichen; kein Figma-Tool wurde aufgerufen.
+  Rollen `Development`, `Review` und `Governance`. Für diesen Readiness-
+  Abgleich wurden die sichtbaren Figma-Tooldefinitionen lokal abgeglichen;
+  der tatsächliche Variablenabruf ist im nachfolgenden Anschluss dokumentiert.
 - **Gesicherter Kandidat:** `figma_get_metadata` für einen vom Menschen
   benannten File-/Node-Scope. Erwartet werden E1-Strukturmetadaten; Screenshot,
   Variablen, Design-Context und Schreiboperationen sind nicht Bestandteil.
@@ -2819,4 +2820,30 @@ Vergleichsmatrix, Evidenz und Grenzen bleiben im verlinkten Befund.
 - **Ergebnis:** `S2-Kandidat dokumentiert`.
 - **Genau ein nächster Schritt:** `figma_get_metadata` für einen konkreten
   File-/Node-Scope mit Datenklasse, Berechtigung und Abnahme menschlich
-  freigeben oder zurückweisen. Bis dahin bleibt S2 gesperrt.
+  freigeben oder zurückweisen. Bis dahin bleibt diese Metadata-Capability für
+  S2 gesperrt.
+
+#### S2-Anschluss: Tatsächlicher Variablenabruf am Toggle
+
+- **Evidenz- und Toolingstatus:** Modus `Pilot`, Nutzungsebene
+  `Systementwicklung` mit getrennter fachlicher Wirkung, Rollen `Design`,
+  `Development` und `Review`. `mcp__codex_apps__figma_get_variable_defs` wurde
+  read-only am Node `155:61945` ausgeführt und hat verwertbare Definitionen
+  zurückgegeben.
+- **Gesicherter Rohbefund:** Sichtbar sind unter anderem
+  `toggle/themed/handle` `#001e50`, `toggle/themed/bg` `#e5e8ef`,
+  `toggle/themed/bg-hover` `#bcc5d91a`, `toggle/themed/handle-disabled`
+  `#6a767d`, `toggle/themed/bg-disabled` `#dfe4e8` und `primary/white`
+  `#ffffff` sowie ein Drop-Shadow-Effekt.
+- **Evidenzgrenze:** Der Abruf belegt keine Property-/Variant-Zuordnung,
+  keine Collection-/Mode-Zuordnung und keine fachliche Theming-Abnahme.
+- **Freigabegrenze:** Dieser ausdrücklich autorisierte Einzelabruf ist ein
+  Testbefund und keine generelle S2- oder Figma-Integrationsfreigabe.
+- **Repo-first-Rückfluss:** Der vollständige Roh- und Grenzbefund steht in
+  [`reviews/s2-toggle-variable-read-2026-10-20.md`](../../reviews/s2-toggle-variable-read-2026-10-20.md).
+- **Bewusst nicht übernommen:** Keine Figma-Änderung, kein Screenshot, kein
+  Design-Context, keine automatische semantische oder Accessibility-Aussage.
+- **Ergebnis:** `Read-only-Abruf bestätigt; fachliche Zuordnung offen`.
+- **Genau ein nächster Schritt:** Die relevanten Variant-Nodes gezielt einzeln
+  prüfen und Property-/Variant- sowie Collection-/Mode-Evidenz getrennt
+  nachweisen.
