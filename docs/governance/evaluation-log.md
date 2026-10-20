@@ -89,6 +89,7 @@ neue Reihenfolge.
 | E-070 | 2026-08-04 | Standprüfung V5 gegen Kriterien, Lean-Nutzen und Komponenten-Best-Practice | Kurzprüfung | nicht bestanden / begrenzt verwertbar | V5 als Befundträger behalten, aber nicht als bestandene Button-Komponente oder finales Doku-Template nutzen; nächster Schritt bleibt ein reiner V6-Komponentenbau ohne Dokumentationsflächen. |
 | E-071 | 2026-10-20 | Vorläufiger Wiki-Freeze wegen Pflege- und Kontextaufwand | Systembefund | umgesetzt mit Nacharbeit | Wiki-Relevanz später an einem konkreten Nutzungsszenario prüfen; bis dahin keine Routinepflege und keine Verlagerung in GitHub Wiki. |
 | E-072 | 2026-10-20 | Repository-first Research und Konzeptansatz für Designer-QA-Unterstützung | Systembefund | Vorschlag dokumentiert | Zuerst den im Review-Artefakt gesicherten systemischen Architekturabgleich (Quellen-/Statusmatrix, Rollen-/Arbeitsteilungsvertrag, aktive/historische Pfade, Migrations- und Ablöseplan) menschlich bewerten; erst danach darf ein read-only QA-Fall die Zielarchitektur validieren. |
+| E-073 | 2026-10-20 | Dev-ready Planung für das Designer-Assistenzsystem | Systembefund | Vorschlag dokumentiert | Diesen Plan menschlich bewerten und S0 – Architektur-Reconciliation freigeben oder zurückweisen; erst danach einen Umsetzungsslice öffnen. |
 
 **Redaktioneller Hinweis (2026-07-28):** E-038 trägt den zuvor doppelt als
 E-030 geführten Befund zur Regelpflege und Statussynchronisation. Die Kennung
@@ -2675,3 +2676,45 @@ Vergleichsmatrix, Evidenz und Grenzen bleiben im verlinkten Befund.
   aktive und historische Pfade sowie ein behutsamer Migrations- und
   Ablöseplan. Erst nach menschlicher Bewertung dieses Abgleichs darf ein
   read-only Pilot als Validierung der Zielarchitektur beauftragt werden.
+
+### E-073 – Dev-ready Planung für das Designer-Assistenzsystem
+
+- **Evidenz- und Toolingstatus:** Modus `Vorschlag` mit anschließendem
+  `Status sichern`, Nutzungsebene `Systementwicklung` mit getrennt
+  berücksichtigter fachlicher Nutzung, Rolle systemisch nutzerzentrierte
+  Architektur/Development und Governance. Geprüft wurden die bestehenden
+  Governance-, Rollen-, Operations-, Tooling- und Evaluationsquellen sowie
+  offizielle Figma-, MCP-, W3C-, NIST- und JSON-Schema-Quellen. Es wurden keine
+  Figma- oder externen Schreibfunktionen verwendet.
+- **Systemischer Befund:** Das bestehende System ist noch keine eigene
+  Runtime, sondern eine kontrollierte Arbeitsteilung zwischen Designer:in,
+  Host/Assistenz, Figma-Evidenz und Repository. Die tragfähige Umsetzung muss
+  daher mit Arbeitsvertrag, Evidenz- und Befundmodell sowie einem read-only
+  Host-Ablauf beginnen, nicht mit einer generischen Agentenplattform.
+- **Gesicherte Synthese:** Das Review-Artefakt definiert Systemgrenze,
+  Verantwortungsgrenzen, Capability-Registry, WorkRequest-, EvidencePacket-,
+  Finding- und Decision-Vertrag, Zustands-/Freigabelogik, Stopps, funktionale
+  und nichtfunktionale Anforderungen, Umsetzungsschnitte S0–S6, Testgates,
+  Risiken, Migration und Definition of Ready/Done.
+- **Research-Folge:** Figma-Lesefunktionen werden als begrenzte Capabilities
+  behandelt; MCP-Host/Client/Server-Trennung stützt die Policy-Grenze; W3C
+  begrenzt Accessibility-Ableitungen aus visueller Evidenz; NIST stützt
+  Rollen-, Lebenszyklus- und Ablösungsverantwortung; JSON Schema bleibt ein
+  möglicher späterer Validierungsmechanismus. Kein externes SDK oder Plugin
+  wurde als aktuelle Architektur übernommen.
+- **Repo-first-Rückfluss:** Die vollständige Planung steht in
+  [`reviews/designer-assistance-dev-plan-2026-10-20.md`](../../reviews/designer-assistance-dev-plan-2026-10-20.md).
+  Sie ist ein unverbindlicher Vorschlag und erzeugt keine neue Decision oder
+  bestätigte Regel. Der Chat ist nicht die alleinige Wissensquelle.
+- **Bewusst nicht übernommen:** Keine Figma-Änderung, kein Produktionscode,
+  kein Code Connect, kein Design-to-Code, keine Synchronisation, keine neue
+  Multi-Agenten-Runtime, keine neue MCP-Abhängigkeit und keine Reaktivierung
+  der Wiki-Pflege.
+- **Tooling- und Pflegegrenze:** Das Repository enthält keine bestätigte
+  Produkt-Codebasis oder interne Freigabe für einen konkreten Figma-
+  Integrationsweg. Framework, Runtime und Datenklassen bleiben deshalb offene
+  Entscheidungen und werden nicht stillschweigend festgelegt.
+- **Ergebnis:** `Vorschlag dokumentiert`.
+- **Genau ein nächster Schritt:** Den Plan menschlich bewerten und S0 –
+  Architektur-Reconciliation freigeben oder zurückweisen. Erst danach darf
+  ein Umsetzungsslice beauftragt werden.
