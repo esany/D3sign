@@ -89,7 +89,7 @@ neue Reihenfolge.
 | E-070 | 2026-08-04 | Standprüfung V5 gegen Kriterien, Lean-Nutzen und Komponenten-Best-Practice | Kurzprüfung | nicht bestanden / begrenzt verwertbar | V5 als Befundträger behalten, aber nicht als bestandene Button-Komponente oder finales Doku-Template nutzen; nächster Schritt bleibt ein reiner V6-Komponentenbau ohne Dokumentationsflächen. |
 | E-071 | 2026-10-20 | Vorläufiger Wiki-Freeze wegen Pflege- und Kontextaufwand | Systembefund | umgesetzt mit Nacharbeit | Wiki-Relevanz später an einem konkreten Nutzungsszenario prüfen; bis dahin keine Routinepflege und keine Verlagerung in GitHub Wiki. |
 | E-072 | 2026-10-20 | Repository-first Research und Konzeptansatz für Designer-QA-Unterstützung | Systembefund | Vorschlag dokumentiert | Zuerst den im Review-Artefakt gesicherten systemischen Architekturabgleich (Quellen-/Statusmatrix, Rollen-/Arbeitsteilungsvertrag, aktive/historische Pfade, Migrations- und Ablöseplan) menschlich bewerten; erst danach darf ein read-only QA-Fall die Zielarchitektur validieren. |
-| E-073 | 2026-10-20 | Dev-ready Planung für das Designer-Assistenzsystem | Systembefund | Vorschlag dokumentiert | Diesen Plan menschlich bewerten und S0 – Architektur-Reconciliation freigeben oder zurückweisen; erst danach einen Umsetzungsslice öffnen. |
+| E-073 | 2026-10-20 | Dev-ready Planung für das Designer-Assistenzsystem | Systembefund | Vorschlag dokumentiert | Den S0-Reconciliation-Befund menschlich bewerten und die vorgeschlagene Autoritäts-/Statusmatrix sowie den Übergang zu S1 freigeben oder zurückweisen; erst danach einen Umsetzungsslice öffnen. |
 
 **Redaktioneller Hinweis (2026-07-28):** E-038 trägt den zuvor doppelt als
 E-030 geführten Befund zur Regelpflege und Statussynchronisation. Die Kennung
@@ -2718,3 +2718,45 @@ Vergleichsmatrix, Evidenz und Grenzen bleiben im verlinkten Befund.
 - **Genau ein nächster Schritt:** Den Plan menschlich bewerten und S0 –
   Architektur-Reconciliation freigeben oder zurückweisen. Erst danach darf
   ein Umsetzungsslice beauftragt werden.
+
+#### S0-Anschluss: Architektur-Reconciliation
+
+- **Evidenz- und Toolingstatus:** Modus `Vorschlag` mit anschließendem
+  `Status sichern`, Nutzungsebene `Systementwicklung` mit getrennt
+  ausgewiesener fachlicher Wirkung, Rolle `Architecture`, `Development` und
+  `Governance`. Es wurden die zuständigen Repository-Quellen und der
+  dev-ready Plan gezielt gelesen. Es wurden keine Figma-, externen oder
+  schreibenden Toolfunktionen verwendet.
+- **Gesicherter Befund:** Der ausführbare Kern liegt in `AGENTS.md`, der
+  Quellen-/Funktionsmatrix und den bestätigten Decisions D-017, D-018, D-025,
+  D-026, D-028, D-029 und D-031 bis D-036. D-009 bis D-016 werden praktisch
+  referenziert, sind aber weiterhin Entwürfe. D-019 und E-071 bilden einen
+  sichtbaren Statuskonflikt zwischen ursprünglicher Wiki-Entscheidung und
+  aktuellem vorläufigem Pflege-Freeze. Die Base-Template-Stufen v0.1/v0.2/v0.3
+  sind historische bzw. offene Entwicklungspfade und keine bestätigte aktuelle
+  Produktroadmap.
+- **Rollenbefund:** Designer:in bleibt fachliche Eigentümer:in von Frage,
+  Bedeutung, Priorität, Qualitätsurteil und Abnahme. Die Assistenz klärt,
+  begrenzt, wählt eine Capability, sammelt Evidenz und bereitet Befunde vor.
+  Figma liefert begrenzte Evidenz; Repository und Governance sichern Status
+  und Rückfluss. Keine Rolle erhält durch technische Schreibfähigkeit neue
+  fachliche Entscheidungsrechte.
+- **Pfadbefund:** Aktiv sind Arbeitsvertrag, bestätigte Governance,
+  Rollenanforderungen, operative Prüfschritte und repo-first Nachweisführung.
+  Read-only-Figma bleibt ein später zu prüfender Capability-Kandidat.
+  Figma-Write, Code Connect, Design-to-Code, Produktionscode, zusätzliche
+  MCP-/SDK-/Multi-Agentenpfade und Wiki-Routinepflege bleiben außerhalb des
+  aktuellen Umsetzungspfads.
+- **Repo-first-Rückfluss:** Der vollständige Befund steht in
+  [`reviews/architecture-reconciliation-2026-10-20.md`](../../reviews/architecture-reconciliation-2026-10-20.md).
+  Er enthält Quellen-/Autoritätsmatrix, Statusabgleich, Rollenvertrag,
+  Pfadmatrix, Migrations-/Ablöseplan, S1-Voraussetzungen und den offenen
+  menschlichen Entscheid. Er erzeugt keine neue Decision und bestätigt keine
+  offene Regel automatisch.
+- **Bewusst nicht übernommen:** Keine Statusübernahme für D-009 bis D-016,
+  keine Ablösung von D-019, keine Aktivierung der Base-Template-Roadmap, keine
+  Wiki-Reaktivierung, keine Figma-Integration und keine Runtime-Entscheidung.
+- **Ergebnis:** `Vorschlag dokumentiert`.
+- **Genau ein nächster Schritt:** Die vorgeschlagene Autoritäts-/Statusmatrix
+  und die Grenzen für S1 menschlich akzeptieren oder zurückweisen. Bis dahin
+  bleibt S1 nicht freigegeben.
