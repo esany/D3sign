@@ -3,20 +3,21 @@
 ## Status und Transparenz
 
 Dieser Befund ist ein repo-basierter Systementwicklungsbefund im Modus
-`Vorschlag`. Er leitet Anforderungen und Akzeptanzkriterien aus dem
-vorhandenen Material ab, setzt aber keine neue Regel und ersetzt keine
-menschliche Decision.
+`Umsetzen innerhalb bestätigter Regeln mit offenem Entscheidungsrückfluss`.
+Er führt die bestätigte Konsolidierungsentscheidung D-037 aus. Einzelne
+fachliche Statuswechsel bleiben davon getrennt und werden nicht stillschweigend
+vorweggenommen.
 
 | Feld | Befund |
 |---|---|
 | Ziel | Verborgene Anforderungen, Designerbedürfnisse, Statusbrüche und eine schlanke, deterministisch prüfbare Zielstruktur aus dem Repository herausarbeiten. |
 | Gegenstand | `AGENTS.md`, `docs/`, bestätigte Decisions, Evaluation Log, bestehende Reviews, Git-Historie und GitHub-Issuebestand. |
 | Nutzungsebene | `Systementwicklung` mit getrennt betrachteter fachlicher Designerwirkung |
-| Modus | `Vorschlag` mit kontrolliertem Repository-Rückfluss |
+| Modus | `Umsetzen innerhalb bestätigter Regeln` mit offenem Entscheidungsrückfluss |
 | Rolle | `Architecture`, `Governance`, `Review`, mit Designfokus |
 | Gelesene Funktionen | gezielte Repository-Suche, Quellenabgleich, Git-Historie, öffentlicher GitHub-Issue-Read-only-Abruf |
 | Nicht ausgeführt | kein Figma-Aufruf, keine Figma-/Token-/Komponentenänderung, keine Wiki-Pflege, keine neue Runtime, keine Issue-Mutation |
-| Ergebnisstatus | `Vorschlag dokumentiert`; Anforderungen und Zielstruktur sind noch nicht als verbindliche Regeln gesetzt |
+| Ergebnisstatus | `freigegeben zur Konsolidierung`; Einzel- und Regelstatus bleiben dort offen, wo eine eigene fachliche Entscheidung erforderlich ist |
 
 ## 1. Kernbefund
 
@@ -289,15 +290,12 @@ Evaluation Log erhält einen Nachweis über:
 Nicht verändert werden bestätigte Decisions, `AGENTS.md`, Wiki-Detailseiten,
 Figma, Tokens, Komponenten und externe Toolkonfigurationen.
 
-## 10. Genau ein nächster menschlicher Entscheid
+## 10. Freigabe und aktueller Anschluss
 
-Soll der vorgeschlagene Gate-basierte Arbeitsvertrag als verbindliche
-Konsolidierungsgrundlage angenommen werden, um danach D-009 bis D-016 sowie
-den Konflikt D-019/E-071 einzeln zu bestätigen, zusammenzuführen, abzulösen
-oder zu verwerfen?
-
-Bis zu dieser Entscheidung bleiben die Anforderungen und Akzeptanzkriterien
-ein repo-basierter, dev-ready Vorschlag und keine neue globale Regel.
+Die Gate-basierte Konsolidierungsgrundlage ist durch D-037 bestätigt. Die
+Anforderungen und Akzeptanzkriterien sind damit als Arbeitsgrundlage
+freigegeben; einzelne Decision-Status bleiben offen, wenn sie eine eigene
+fachliche Begründung oder Ablösung benötigen.
 
 ## 11. Status- und Quellenbereinigung nach Ausführung
 
@@ -316,3 +314,25 @@ Die Decision-Status D-009 bis D-016 sowie D-019 wurden nicht verändert. Ihre
 Disposition bleibt eine menschliche Entscheidung. Die Wiki bleibt im
 vorläufigen Freeze aus E-071. Der Issue-Abgleich ergab weiterhin keine offenen
 Issues; es wurde keine externe Mutation ausgeführt.
+
+## 12. Einzel-Dispositionen für D-009 bis D-016
+
+Die folgende Matrix ist durch D-037 als Arbeitsgrundlage freigegeben. Sie
+ändert die Einzelstatus im Decision Log noch nicht.
+
+| Decision | Aktuelle Einordnung | Tatsächliche Zielquelle | Vorgeschlagene Disposition | Begründung und Folge |
+|---|---|---|---|---|
+| D-009 Rollen | Entwurf, praktisch in `AGENTS.md`, Prompting Guide und Role Needs verwendet | `AGENTS.md` plus `docs/governance/role-needs-and-user-stories.md` | `zusammenführen` | Die Schutzwirkung ist aktiv; die Decision darf nicht parallel als eigenständige Regel fortbestehen. Einzelstatus bleibt bis zur Statusentscheidung sichtbar. |
+| D-010 Transparenz | Entwurf, praktisch in Transparenzpflicht, Base Template und Checklists verwendet | `AGENTS.md`, `docs/governance/base-template.md`, `docs/governance/evaluation-framework.md` | `zusammenführen` | Die Pflichtfelder und Rollenklärung existieren bereits; der offene Status erzeugt Statusdrift. |
+| D-011 Library-Grundbaustein | Entwurf, als generischer Foundation-Rahmen weiterhin relevant | `docs/governance/base-template.md`, `docs/foundations/` | `als Entwurf offen halten` | Der Grundbaustein bleibt Vorschlags-/Foundationmaterial und ist kein konkretes Projektziel. |
+| D-012 Ausbaustufen | Entwurf mit historischer v0.1/v0.2/v0.3-Staffelung | `reviews/designer-assistance-dev-plan-2026-10-20.md` und E-074/E-075 | `historisch markieren` | Die alte Roadmap darf nicht parallel als aktuelle Lieferplanung gelesen werden. |
+| D-013 Toolwahl | Entwurf, praktisch in `AGENTS.md`, Prompting Guide und Tooling Map verwendet | `AGENTS.md`, `docs/operations/prompting-guide.md`, `docs/tooling/tooling-map.md` | `zusammenführen` | Toolwahl und Scope sind bereits ausführbar geregelt; die Capability bleibt fallbezogen. |
+| D-014 Evidenzstatus | Entwurf, praktisch im Evaluation Framework und in jedem neueren Befund verwendet | `AGENTS.md`, `docs/governance/evaluation-framework.md`, `docs/operations/workflows.md` | `zusammenführen` | Evidenz vor Ableitung ist aktive Arbeitslogik; der Status muss mit der Quelle synchronisiert werden. |
+| D-015 Regelkandidaten | Entwurf, praktisch über `REGEL SETZEN` und AGENTS-Governance verwendet | `AGENTS.md`, `docs/governance/decisions.md` | `zusammenführen` | Die Schutzwirkung bleibt erhalten; automatische Regelsetzung bleibt ausgeschlossen. |
+| D-016 Delta-Nachweis | Entwurf, praktisch durch `Status sichern` und Evaluation angewendet | `AGENTS.md`, `docs/governance/evaluation-log.md` | `zusammenführen` | Der Delta-Nachweis ist Teil des bestehenden Rückflusses; keine zusätzliche Statusablage nötig. |
+
+Für D-009, D-010 und D-013 bis D-016 ist der nächste fachliche Schritt eine
+gebündelte Statusentscheidung über Zusammenführung und Ablösung der
+historischen Einzelentries. D-011 bleibt bis zur gesonderten Foundation-
+Bewertung offen. D-012 wird als historische Roadmap markiert, ohne die
+Entwicklungsgeschichte zu löschen.

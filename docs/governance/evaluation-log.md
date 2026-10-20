@@ -88,10 +88,10 @@ neue Reihenfolge.
 | E-069 | 2026-08-03 | V5-Review-Rückfluss: Kriterien und Tests für reinen Komponentenbau | Kurzprüfung | bestanden mit Nacharbeit | Beim nächsten reinen Komponentenbau-Test das neue Prüfgate anwenden; erst nach bestandenem Test über Regelsetzung oder weitere Verdichtung entscheiden. |
 | E-070 | 2026-08-04 | Standprüfung V5 gegen Kriterien, Lean-Nutzen und Komponenten-Best-Practice | Kurzprüfung | nicht bestanden / begrenzt verwertbar | V5 als Befundträger behalten, aber nicht als bestandene Button-Komponente oder finales Doku-Template nutzen; nächster Schritt bleibt ein reiner V6-Komponentenbau ohne Dokumentationsflächen. |
 | E-071 | 2026-10-20 | Vorläufiger Wiki-Freeze wegen Pflege- und Kontextaufwand | Systembefund | umgesetzt mit Nacharbeit | Wiki-Relevanz später an einem konkreten Nutzungsszenario prüfen; bis dahin keine Routinepflege und keine Verlagerung in GitHub Wiki. |
-| E-072 | 2026-10-20 | Repository-first Research und Konzeptansatz für Designer-QA-Unterstützung | Systembefund | Vorschlag dokumentiert | Zuerst den im Review-Artefakt gesicherten systemischen Architekturabgleich (Quellen-/Statusmatrix, Rollen-/Arbeitsteilungsvertrag, aktive/historische Pfade, Migrations- und Ablöseplan) menschlich bewerten; erst danach darf ein read-only QA-Fall die Zielarchitektur validieren. |
-| E-073 | 2026-10-20 | Dev-ready Planung für das Designer-Assistenzsystem | Systembefund | Vorschlag dokumentiert | Die sechs realen Toggle-Varianten und ihre sichtbaren Definitionen sind gesichert; der Designer entscheidet als Nächstes zwischen fachlicher Bewertung und gezielter Collection-/Mode-/Property-Evidenz. |
-| E-074 | 2026-10-20 | Tiefenaudit, Anforderungsableitung und Operationalisierung | Systembefund | Vorschlag dokumentiert | Den Gate-basierten Arbeitsvertrag menschlich annehmen oder zurückweisen; erst danach D-009–D-016 und D-019/E-071 einzeln statusbereinigen. |
-| E-075 | 2026-10-20 | Quellen-, Status- und Pfadbereinigung | Systembefund | Vorschlag dokumentiert | Den vorgeschlagenen Status- und Quellenvertrag menschlich annehmen oder zurückweisen; bis dahin bleiben Decision-Status unverändert und die S2-/Roadmap-Pfade historisch eingeordnet. |
+| E-072 | 2026-10-20 | Repository-first Research und Konzeptansatz für Designer-QA-Unterstützung | Systembefund | historischer Vorschlag | Durch E-074/E-075 und D-037 fortgeschrieben; keine eigenständige neue Architektur daraus ableiten. |
+| E-073 | 2026-10-20 | Dev-ready Planung für das Designer-Assistenzsystem | Systembefund | historischer Planungsstand | S2-/Toggle-Anschlussaktionen sind durch E-074/E-075 und D-037 eingeordnet; kein aktueller Figma-Ausführungspfad. |
+| E-074 | 2026-10-20 | Tiefenaudit, Anforderungsableitung und Operationalisierung | Systembefund | freigegeben zur Konsolidierung | D-037 bestätigt die Konsolidierungsgrundlage; Einzelstatus D-009–D-016 und D-019/E-071 bleiben getrennte Anschlussentscheidungen. |
+| E-075 | 2026-10-20 | Quellen-, Status- und Pfadbereinigung | Systembefund | freigegeben zur Konsolidierung | D-037 ist bestätigt; D-009–D-016 und D-019/E-071 werden entlang der freigegebenen Matrix einzeln bereinigt, ohne offene Einzelentscheidungen stillschweigend zu setzen. |
 
 **Redaktioneller Hinweis (2026-07-28):** E-038 trägt den zuvor doppelt als
 E-030 geführten Befund zur Regelpflege und Statussynchronisation. Die Kennung
@@ -2619,6 +2619,9 @@ Vergleichsmatrix, Evidenz und Grenzen bleiben im verlinkten Befund.
 
 ### E-072 – Repository-first Research und Konzeptansatz für Designer-QA-Unterstützung
 
+> **Arbeitsstand:** Historischer Architekturvorschlag; durch E-074/E-075 und
+> die bestätigte D-037-Konsolidierungsgrundlage fortgeschrieben.
+
 - **Evidenz- und Toolingstatus:** Modus `Vorschlag` mit anschließendem
   `Status sichern`, Nutzungsebene verbunden (`Fachliche Nutzung` und
   `Systementwicklung`), Rollen `Review` und `Governance` mit fachlichem Fokus
@@ -2680,6 +2683,10 @@ Vergleichsmatrix, Evidenz und Grenzen bleiben im verlinkten Befund.
   read-only Pilot als Validierung der Zielarchitektur beauftragt werden.
 
 ### E-073 – Dev-ready Planung für das Designer-Assistenzsystem
+
+> **Arbeitsstand:** Historischer Planungsstand; die früheren S2-/Toggle-
+> Anschlussaktionen sind durch E-074/E-075 und D-037 eingeordnet und nicht
+> mehr der aktuelle Ausführungspfad.
 
 - **Evidenz- und Toolingstatus:** Modus `Vorschlag` mit anschließendem
   `Status sichern`, Nutzungsebene `Systementwicklung` mit getrennt
@@ -2886,6 +2893,10 @@ Vergleichsmatrix, Evidenz und Grenzen bleiben im verlinkten Befund.
 
 ### E-074 – Tiefenaudit, Anforderungsableitung und Operationalisierung
 
+> **Arbeitsstand:** Durch die Freigabe und D-037 fortgeschrieben; der
+> Gate-basierte Arbeitsvertrag ist Konsolidierungsgrundlage, während die
+> Einzel-Decision-Status offen bleiben.
+
 - **Evidenz- und Toolingstatus:** Modus `Vorschlag` mit kontrolliertem
   Repository-Rückfluss, Nutzungsebene `Systementwicklung` mit getrennt
   ausgewiesener fachlicher Designerwirkung, Rollen `Architecture`,
@@ -2925,21 +2936,25 @@ Vergleichsmatrix, Evidenz und Grenzen bleiben im verlinkten Befund.
 
 ### E-075 – Quellen-, Status- und Pfadbereinigung
 
-- **Evidenz- und Toolingstatus:** Modus `Vorschlag` mit kontrolliertem
-  Repository-Rückfluss, Nutzungsebene `Systementwicklung` mit getrennter
-  fachlicher Designerwirkung, Rollen `Architecture`, `Governance` und
-  `Review`. Es wurden nur bestehende Repository-Quellen, die Git-Historie und
+- **Evidenz- und Toolingstatus:** Modus `Umsetzen innerhalb bestätigter Regeln
+  mit offenem Entscheidungsrückfluss`, Nutzungsebene `Systementwicklung` mit
+  getrennter fachlicher Designerwirkung, Rollen `Architecture`, `Governance`
+  und `Review`. Die menschliche Freigabe der Konsolidierungsgrundlage wurde
+  erteilt. Es wurden nur bestehende Repository-Quellen, die Git-Historie und
   der bereits ausgeführte Issue-Read-only-Abgleich verwendet. Figma wurde nicht
   aufgerufen.
+- **Freigegebene Grundlage:** D-037 bestätigt die in E-075 geprüfte Quellen-,
+  Status- und Pfadmatrix sowie den Gate-basierten Arbeitsvertrag. Die
+  Bestätigung setzt offene Einzelstatus nicht automatisch.
 - **Gesicherter Bereinigungsbefund:** S0-Reconciliation bleibt historischer
   Begründungsnachweis; der S2-Capability-Readiness-Text ist ein historischer
   Kandidat; die beiden Toggle-S2-Dateien sind historische Evidenz und kein
   aktuelles Auditformat; der Dev-ready Plan bleibt Vorschlagsquelle, seine
   S0–S2-Pfade sind keine aktuelle Ausführungsroadmap.
-- **Nicht verändert:** Die Decision-Status D-009 bis D-016 und D-019 wurden
-  nicht automatisch geändert. E-071 bleibt der aktuelle vorläufige
-  Wiki-Freeze. Keine Figma-, Token-, Komponenten-, Runtime- oder Wiki-
-  Änderung wurde ausgeführt.
+- **Nicht verändert:** Die Einzelstatus D-009 bis D-016 und D-019 wurden nicht
+  automatisch geändert. E-071 bleibt der aktuelle vorläufige Wiki-Freeze.
+  Keine Figma-, Token-, Komponenten-, Runtime- oder Wiki-Änderung wurde
+  ausgeführt.
 - **Issue-/PR-Stand:** Es gibt keine offenen GitHub-Issues. PR #1 ist gemergt
   und geschlossen. Es wurde kein Issue geschlossen, neu angelegt oder
   umetikettiert.
@@ -2950,7 +2965,9 @@ Vergleichsmatrix, Evidenz und Grenzen bleiben im verlinkten Befund.
 - **Bewusst nicht übernommen:** Keine automatische Bestätigung offener
   Decisions, keine Löschung historischer Nachweise, keine neue Statusdatei,
   keine parallele Auditstruktur und keine externe Issue-Mutation.
-- **Ergebnis:** `Vorschlag dokumentiert; Statusbereinigung vorbereitet`.
-- **Genau ein nächster menschlicher Entscheid:** Soll die vorgeschlagene
-  Quellen- und Statusmatrix als verbindliche Grundlage angenommen werden,
-  bevor D-009–D-016 und D-019/E-071 einzeln entschieden werden?
+- **Ergebnis:** `freigegeben zur Konsolidierung; Einzelstatus offen`.
+- **Genau ein nächster menschlicher Entscheid:** Sollen die gebündelten
+  Dispositionen für D-009, D-010 und D-013 bis D-016 als
+  Zusammenführung/Ablösung der historischen Einzelentries bestätigt werden,
+  während D-011 und D-019/E-071 als getrennte offene Felder fortgeführt
+  werden?

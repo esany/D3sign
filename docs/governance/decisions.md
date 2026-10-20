@@ -55,6 +55,7 @@ Eintrag fortgeschrieben; kein doppelter Eintrag für dieselbe Entscheidung.
 | D-034 | bestätigt | Erweiterungsfähigkeit von Komponentenverträgen | Das Base Template standardisiert keine Projektvarianten vorab, muss aber spätere Erweiterungs- und Migrationsarten im Vertrag unterscheidbar machen. |
 | D-035 | bestätigt | Vertrauensfähige Figma-Komponentendokumentation | Figma-Komponentendokumentation gilt nur als erfüllt, wenn sie Vertrauen, Unterstützung und Verlässlichkeit praktisch herstellt; formale Objektvollständigkeit reicht nicht. |
 | D-036 | bestätigt | Trennung von Komponenten-Erstellung, -Prüfung und -Dokumentation | Ein Komponentenauftrag muss vor Ausführung unterscheiden, ob eine Komponente erstellt, geprüft, dokumentiert oder in definierter Reihenfolge kombiniert wird. |
+| D-037 | bestätigt | Quellen-, Status- und Pfadkonsolidierung | Die freigegebene Status-/Quellenmatrix und der Gate-basierte Arbeitsvertrag bilden die verbindliche Konsolidierungsgrundlage; offene Einzelentscheidungen werden separat geklärt, historische Pfade nicht als aktuelle Ausführungswege behandelt. |
 
 **Hinweis zur Nummerierung:** D-020 ist nicht vergeben; im geprüften
 Projektbestand ist keine historische Decision oder Referenz dazu dokumentiert.
@@ -898,3 +899,37 @@ als bestätigt ausgeben.
   `docs/operations/checklists.md`, `docs/operations/prompting-guide.md`,
   `docs/governance/base-template.md`, `docs/governance/evaluation-log.md`,
   `wiki/project-portrait.md`, `wiki/system-development-and-learning.md`.
+
+### D-037 – Quellen-, Status- und Pfadkonsolidierung
+
+- **Datum:** 2026-10-20
+- **Status:** bestätigt
+- **Geltungsbereich:** Quellenautorität, Arbeitsstände, Reviews, Evaluation,
+  operative Arbeitswege und die weitere Systementwicklung des
+  Designer-Assistenzsystems.
+- **Entscheidung:** Die in E-075 geprüfte und menschlich freigegebene
+  Quellen-, Status- und Pfadmatrix ist die verbindliche
+  Konsolidierungsgrundlage. Der Gate-basierte Arbeitsvertrag
+  `Arbeitsauftrag → passende Quelle/Capability → Evidenz → Befund →
+  menschliche Decision → Repository-Nachweis` ist der aktuelle Arbeitsweg.
+  D-009 bis D-016 werden einzeln gegen ihre tatsächlichen Quellen und
+  Schutzwirkungen bereinigt, ohne ihren Status automatisch zu erhöhen. D-019
+  bleibt als ursprüngliche Wiki-Decision sichtbar; E-071 begrenzt bis zu einer
+  eigenen Entscheidung die Routinepflege. Historische Roadmaps, S0–S2-
+  Befunde und Capability-Kandidaten werden nicht als aktuelle Ausführungswege
+  behandelt.
+- **Begründung:** Das Repository besitzt die fachlichen und operativen
+  Bausteine bereits. Verlässliche Praxis scheitert aktuell an Statusdrift,
+  Quellenüberlagerung und parallelen Arbeitsständen, nicht an fehlender
+  Tooling- oder Runtime-Komplexität. Die Konsolidierung reduziert
+  Fehlinterpretation, Pflegeaufwand und KI-Slop, ohne fachliche
+  Entscheidungsrechte an die Assistenz zu übertragen.
+- **Nicht Teil der Entscheidung:** Keine neue Runtime, keine Figma- oder
+  Tokenänderung, keine automatische semantische Bewertung, keine
+  Wiki-Reaktivierung, keine automatische Bestätigung von D-009 bis D-016 und
+  keine Issue-Erzeugung.
+- **Betroffene Artefakte:** `AGENTS.md`, `docs/README.md`,
+  `docs/governance/decisions.md`, `docs/governance/evaluation-log.md`,
+  `docs/operations/workflows.md`, `docs/operations/checklists.md`,
+  `reviews/repo-deep-audit-and-operationalization-2026-10-20.md` und die
+  historisch gekennzeichneten S0-/S2-/Dev-ready-Reviews.
