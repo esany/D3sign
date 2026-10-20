@@ -1,0 +1,180 @@
+{
+  "mappingStatus": "incomplete",
+  "documentationStatus": "restructured",
+  "scope": {
+    "target": "centrally map input names to fields in create-fixture",
+    "componentSet": { "name": "create-fixture", "nodeId": "175:130388" },
+    "figmaWrites": false,
+    "newFigmaReads": 2,
+    "figmaReadBudget": 2
+  },
+  "mappingPartners": {
+    "base": {
+      "screen": "02.09.00 Manual Config | Initial",
+      "screenNodeId": "3910:121641",
+      "dialogNodeId": "3910:121647",
+      "componentVariantNodeId": "175:130389",
+      "observedInputKeys": ["afoNumber", "derivatives", "facility", "fixtureReason", "fixtureStatus", "hall", "lane", "manufacturingArea", "partType", "plannedWork", "problemDescription", "remark", "stage", "vehicleType"],
+      "instanceMasterEvidence": {
+        "statusField": { "screenInstancePathIncludes": "175:130394", "masterNode": "175:130394", "key": "fixtureStatus", "label": "Status", "binding": "formControlName", "status": "confirmed" },
+        "additionalMasterFieldNodesObserved": ["175:130395", "175:130399", "175:130400", "175:130404", "175:130407", "175:130410", "175:130414", "175:130415", "175:130416", "175:130417", "175:130418", "175:130419", "175:130420"],
+        "remainingNodeKeys": "open"
+      },
+      "evidence": "screen create-fixture instance context with master-node paths and annotations",
+      "status": "observed"
+    },
+    "planned": {
+      "screen": "02.09.01 Manual Config | Status: Geplant (Planned)",
+      "screenNodeId": "3910:121662",
+      "formInstanceNodeId": "3910:121668",
+      "componentVariantNodeId": "241:6470",
+      "observedInputKeys": ["afoNumber", "derivatives", "facility", "fixtureReason", "fixtureStatus", "hall", "lane", "manufacturingArea", "partType", "plannedWork", "problemDescription", "remark", "settingDate", "settingShift", "stage", "vehicleType"],
+      "evidence": "keys extracted from this screen's create-fixture instance",
+      "status": "observed"
+    },
+    "eshim": {
+      "screen": "02.15.00 eShim Config | Initial",
+      "screenNodeId": "3910:121648",
+      "formInstanceNodeId": "3910:121654",
+      "componentVariantNodeId": "243:22734",
+      "observedInputKeys": ["afoNumber", "derivatives", "eshimId", "eshimValueX", "eshimValueY", "eshimValueZ", "facility", "fixtureElementType", "fixtureReason", "hall", "manufacturingArea", "partType", "plannedWork", "pneumaticNumber", "pneumaticNumberIndex", "problemDescription", "productionLine", "remark", "stage", "vehicleType"],
+      "evidence": "keys extracted from this screen's create-fixture instance",
+      "status": "observed"
+    },
+    "done": {
+      "screen": "02.09.02 Manual Config | Status: Durchgeführt (Done)",
+      "screenNodeId": "3910:121713",
+      "formInstanceNodeId": "3910:121719",
+      "componentVariantNodeId": "242:6914",
+      "observedInputKeys": ["afoNumber", "controlParameterX", "controlParameterY", "controlParameterZ", "date", "department", "executerDepartment", "executerSurname", "facility", "fixtureElementType", "fixtureReason", "fixtureStatus", "hall", "lane", "location", "manufacturingArea", "partType", "pinType", "plannedWork", "problemDescription", "remark", "settingDate", "settingShift", "stage", "status", "surname", "toggle", "type", "vehicleType"],
+      "evidence": "keys extracted from this screen's create-fixture instance",
+      "status": "observed",
+      "subvariantEvidence": [
+        { "screen": "02.09.03 Manual Config | Status: Durchgeführt (Done), pinType: Fahrzeugpin", "screenNodeId": "3910:121720", "componentVariantNodeId": "242:9449" },
+        { "screen": "02.09.04 Manual Config | Status: Durchgeführt (Done), pinType: Schichtstempel", "screenNodeId": "3910:121727", "componentVariantNodeId": "242:9449" }
+      ]
+    }
+  },
+  "inputSearchIndex": {
+    "fixtureStatus": { "binding": "formControlName", "seenIn": ["planned", "done"] },
+    "fixtureReason": { "binding": "formControlName", "seenIn": ["base", "planned", "eshim", "done"] },
+    "vehicleType": { "binding": "formControlName", "seenIn": ["base", "planned", "eshim", "done"] },
+    "derivatives": { "binding": "formControlName", "seenIn": ["base", "planned", "eshim"] },
+    "hall": { "binding": "formControlName", "seenIn": ["base", "planned", "eshim", "done"] },
+    "manufacturingArea": { "binding": "formControlName", "seenIn": ["base", "planned", "done"] },
+    "facility": { "binding": "formControlName", "seenIn": ["base", "planned", "eshim", "done"] },
+    "partType": { "binding": "formControlName", "seenIn": ["base", "planned", "eshim", "done"] },
+    "stage": { "binding": "formControlName", "seenIn": ["base", "planned", "eshim", "done"] },
+    "lane": { "binding": "formControlName", "seenIn": ["base", "planned", "eshim", "done"] },
+    "afoNumber": { "binding": "formControlName", "seenIn": ["base", "planned", "eshim", "done"] },
+    "problemDescription": { "binding": "formControlName", "seenIn": ["base", "planned", "eshim", "done"] },
+    "plannedWork": { "binding": "formControlName", "seenIn": ["base", "planned", "eshim", "done"] },
+    "remark": { "binding": "formControlName", "seenIn": ["base", "planned", "eshim", "done"] },
+    "settingDate": { "binding": "formControlName", "seenIn": ["planned", "done"] },
+    "settingShift": { "binding": "formControlName", "seenIn": ["planned", "done"] },
+    "eshimId": { "binding": "formControlName", "seenIn": ["eshim"] },
+    "eshimValueX": { "binding": "formControlName", "seenIn": ["eshim"] },
+    "eshimValueY": { "binding": "formControlName", "seenIn": ["eshim"] },
+    "eshimValueZ": { "binding": "formControlName", "seenIn": ["eshim"] },
+    "fixtureElementType": { "binding": "formControlName", "seenIn": ["eshim", "done"] },
+    "pneumaticNumber": { "binding": "formControlName", "seenIn": ["eshim"] },
+    "pneumaticNumberIndex": { "binding": "formControlName", "seenIn": ["eshim"] },
+    "productionLine": { "binding": "formControlName", "seenIn": ["eshim"] },
+    "controlParameterX": { "binding": "formControlName", "seenIn": ["done"] },
+    "controlParameterY": { "binding": "formControlName", "seenIn": ["done"] },
+    "controlParameterZ": { "binding": "formControlName", "seenIn": ["done"] },
+    "executerDepartment": { "binding": "formControlName", "seenIn": ["done"] },
+    "executerSurname": { "binding": "formControlName", "seenIn": ["done"] },
+    "pinType": { "binding": "formControlName", "seenIn": ["done"] },
+    "date": { "binding": "formControlName", "seenIn": ["done"] },
+    "department": { "binding": "formControlName", "seenIn": ["done"] },
+    "location": { "binding": "formControlName", "seenIn": ["done"] },
+    "status": { "binding": "formControlName", "seenIn": ["done"] },
+    "surname": { "binding": "formControlName", "seenIn": ["done"] },
+    "toggle": { "binding": "formControlName", "seenIn": ["done"] },
+    "type": { "binding": "formControlName", "seenIn": ["done"] }
+  },
+  "componentTargetMapping": {
+    "variantNodes": { "base": "175:130389", "planned": "241:6470", "eshim": "243:22734", "done": "242:6914", "done.pinType": "242:9449" },
+    "fields": [
+      { "variant": "base", "masterNode": "175:130394", "key": "fixtureStatus", "label": "Status", "binding": "formControlName", "evidenceScreen": "3910:121641", "status": "confirmed" }
+    ],
+    "fieldNodeCandidates": ["175:130395", "175:130399", "175:130400", "175:130404", "175:130407", "175:130410", "175:130414", "175:130415", "175:130416", "175:130417", "175:130418", "175:130419", "175:130420"],
+    "fieldNodeToKeyStatus": "partial; one exact mapping confirmed, remaining candidates require label/path comparison"
+  },
+  "screenVerification": {
+    "verificationRun": "not performed in this restructuring pass; prior screen inventory retained as references",
+    "screens": {
+      "3910:121641": { "name": "02.09.00 Manual Config | Initial", "priorVariant": "base", "priorStatus": "inferred" },
+      "3910:121648": { "name": "02.15.00 eShim Config | Initial", "priorVariant": "eshim", "priorStatus": "mapping-partner" },
+      "3910:121655": { "name": "02.14.01 Create New (eShim) | Initial Dialog", "priorVariant": "eshim", "priorStatus": "verified-by-state" },
+      "3910:121662": { "name": "02.09.01 Manual Config | Status: Geplant (Planned)", "priorVariant": "planned", "priorStatus": "mapping-partner" },
+      "3910:121669": { "name": "02.09.05 Manual Config | Status: Vorgemerkt (Preplanned)", "priorVariant": "base", "priorStatus": "mapping-partner" },
+      "3910:121676": { "name": "02.09.06 Manual Config | Aufbaustufe gewählt", "priorVariant": "base", "priorStatus": "inferred" },
+      "3910:121684": { "name": "02.09.07 Manual Config | Teileart gewählt", "priorVariant": "base", "priorStatus": "inferred" },
+      "3910:121692": { "name": "02.09.08 Manual Config | Fixierelement gewählt", "priorVariant": "base", "priorStatus": "inferred" },
+      "3910:121699": { "name": "02.09.09 Manual Config | Keine Pneumatiknummer", "priorVariant": "base", "priorStatus": "inferred" },
+      "3910:121706": { "name": "02.09.10 Manual Config | Roboternummer", "priorVariant": "base", "priorStatus": "inferred" },
+      "3910:121713": { "name": "02.09.02 Manual Config | Status: Durchgeführt (Done)", "priorVariant": "done", "priorStatus": "mapping-partner" },
+      "3910:121720": { "name": "02.09.03 Manual Config | Status: Durchgeführt (Done), pinType: Fahrzeugpin", "priorVariant": "done.pinType", "priorStatus": "mapping-partner" },
+      "3910:121727": { "name": "02.09.04 Manual Config | Status: Durchgeführt (Done), pinType: Schichtstempel", "priorVariant": "done.pinType", "priorStatus": "mapping-partner" },
+      "3910:122184": { "name": "02.14.00 Create New (eShim) | Initial", "priorVariant": "not-applicable", "priorStatus": "no-create-fixture-instance" },
+      "3910:122302": { "name": "02.07.00 Create New (manual) | Initial", "priorVariant": "base", "priorStatus": "inferred" },
+      "3910:122309": { "name": "02.07.01 Create New (manual) | Validation Error", "priorVariant": "base", "priorStatus": "inferred" },
+      "3910:122317": { "name": "02.08.02 Edit Fixture | Initial Dialog (Done)", "priorVariant": "done", "priorStatus": "inferred" },
+      "3910:122324": { "name": "02.08.03 Edit Fixture | Entries Deprecated", "priorVariant": "base", "priorStatus": "inferred" },
+      "9094:104941": { "name": "02.09a.01 Manual Config | Status: Messpunkt auswählen", "priorVariant": "base", "priorStatus": "inferred" },
+      "9094:106495": { "name": "02.09a.02 Manual Config | Status: Messpunkt dokumentiert", "priorVariant": "base", "priorStatus": "inferred" },
+      "9151:108005": { "name": "02.09a.02 Manual Config | Status: Messpunkt suchen", "priorVariant": "base", "priorStatus": "inferred" },
+      "9091:98034": { "name": "02.09a.04 Status: Messbericht prüfen - Initial", "priorVariant": "done", "secondaryDialog": true, "priorStatus": "inferred" },
+      "9347:186026": { "name": "02.09a.04 Status: Messbericht prüfen - Messpunktauswahl ändern", "priorVariant": "done", "secondaryDialog": true, "priorStatus": "inferred" },
+      "9347:234637": { "name": "02.09a.04 Status: Messbericht prüfen - Keine Messpunktdaten vorhanden", "priorVariant": "done", "secondaryDialog": true, "priorStatus": "inferred" }
+    }
+  },
+  "unresolvedEvidence": {
+    "previouslyObservedButNotPartnerScoped": ["bodyPartId", "dNumber", "dNumberPrefix", "effectivenessChecks", "executerForename", "eshimDimension", "forename", "robotNumber", "shiftStamp"],
+    "priorCandidateCatalog": {
+      "meaning": "Earlier aggregate field labels, UI types, and conditions retained as candidates; they are not per-screen observations or verified master-node mappings.",
+      "common": [
+        { "key": "fixtureStatus", "label": "Status", "ui": "Dropdown", "binding": "formControlName" },
+        { "key": "fixtureReason", "label": "Stellgrund", "ui": "Dropdown", "binding": "formControlName" },
+        { "key": "vehicleType", "label": "Variante(n)", "ui": "Dropdown", "binding": "formControlName" },
+        { "key": "derivatives", "label": "Derivate", "ui": "selection", "binding": "formControlName" },
+        { "key": "hall", "label": "Halle", "ui": "Dropdown", "binding": "formControlName" },
+        { "key": "manufacturingArea", "label": "Fertigungsabschnitt", "ui": "Dropdown", "binding": "formControlName" },
+        { "key": "facility", "label": "Anlage", "ui": "Dropdown", "binding": "formControlName" },
+        { "key": "partType", "label": "Teileart", "ui": "Dropdown", "binding": "formControlName" },
+        { "key": "stage", "label": "Aufbaustufe", "ui": "Dropdown", "binding": "formControlName" },
+        { "key": "lane", "label": "Linie", "ui": "Dropdown", "binding": "formControlName" },
+        { "key": "afoNumber", "label": "AFO-Nummer", "ui": "Text Input", "binding": "formControlName" },
+        { "key": "problemDescription", "label": "Problembeschreibung", "ui": "Multiline Text Input", "binding": "formControlName" },
+        { "key": "plannedWork", "label": "Maßnahme", "ui": "Multiline Text Input", "binding": "formControlName" },
+        { "key": "remark", "label": "Bemerkungen", "ui": "Multiline Text Input", "binding": "formControlName" }
+      ],
+      "variantDeltas": {
+        "planned": ["settingDate: Stelldatum, Date Picker", "settingShift: Stellschicht, Dropdown"],
+        "eshim": ["eshimId", "eshimValueX", "eshimValueY", "eshimValueZ", "fixtureElementType", "pneumaticNumber", "pneumaticNumberIndex"],
+        "done": ["fixtureElementType", "controlParameterX", "controlParameterY", "controlParameterZ", "executerDepartment", "executerSurname", "executerForename", "effectivenessChecks (formGroupName)"],
+        "pinType": ["pinType", "shiftStamp (condition previously described as pinType=Schichtstempel)"],
+        "fixtureBranches": ["dNumber (condition previously described as no pneumatic number)", "dNumberPrefix (condition previously described as no pneumatic number)", "robotNumber (condition previously described as fixture type=robot)"],
+        "measurement": ["measurementPoints (provisional label; not confirmed as an annotation key)"]
+      }
+    },
+    "previouslyReportedNestedGroups": {
+      "vehicles": ["bodyPartId", "derivatives", "pinType", "shiftStamp", "vehicleType"],
+      "fixtureElements": ["controlParameterX", "controlParameterY", "controlParameterZ", "dNumber", "dNumberPrefix", "eshimDimension", "eshimId", "eshimValueX", "eshimValueY", "eshimValueZ", "fixtureElementType", "pneumaticNumber", "pneumaticNumberIndex", "robotNumber"],
+      "effectivenessChecks": ["date", "department", "forename", "location", "status", "surname", "toggle", "type", "vehicleType"]
+    },
+    "unsupportedPriorEntries": ["measurementPoints was a provisional label, not a confirmed annotation key; omitted from inputSearchIndex"]
+  },
+  "open": [
+    "Match each inputSearchIndex key to its exact field node in the corresponding create-fixture variant.",
+    "Confirm whether master-level annotation names inherit to screen instances.",
+    "Screen verification for the other 20 screens remains a later step.",
+    "The prior inventory says seven screen contexts did not expose annotations; exact per-screen annotation coverage is unresolved.",
+    "CPA Body form variant, Model Header actions, and single scroll owner remain open for the separate view conversion.",
+    "Whether the secondary Messbericht dialogs remain overlays is a separate scope decision.",
+    "Whether done.pinType stays a technical master subvariant or becomes a conditional branch remains undecided."
+  ],
+  "nextStep": "Use each mapping partner's observed keys to locate matching input nodes in its create-fixture component variant; keep any unconfirmed match open."
+}
