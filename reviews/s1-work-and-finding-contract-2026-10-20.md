@@ -17,9 +17,9 @@ strukturierte, nachvollziehbare Objekte übersetzt werden kann.
 | Quellen | S0-Reconciliation, dev-ready Plan, `AGENTS.md`, Governance, Operations und Tooling Map. |
 | Automatisch ausgeführt | Vertragsableitung, Status-/Übergangsentwurf und drei synthetische Durchläufe. |
 | Nicht ausgeführt | Figma-Aufruf, externe Toolfunktion, Schreibaktion, Runtime, Code und reale Designerfallprüfung. |
-| Menschlich zu entscheiden | Ob die Vertragsfelder als Grundlage für einen späteren S2-/S3-Slice genügen. |
+| Menschlich entschieden | Der Pilotvertrag wird als Grundlage für den späteren S2-Slice weitergeführt. |
 | Pilotgrenze | Keine kanonische Schema-Datei, keine Statusübernahme für D-009–D-016, keine Decision-Änderung. |
-| Genau ein nächster Schritt | Den Pilotvertrag menschlich bewerten und über seine Weiterführung oder Verwerfung entscheiden. |
+| Genau ein nächster Schritt | Konkrete read-only-Figma-Capability und Integrationsfreigabe für S2 klären. |
 
 ## 1. Zweck und Ablauf
 
@@ -396,9 +396,14 @@ Entscheidung als unterschiedliche Stopps modellierbar sind.
 - **Weiterhin offen:** menschliche Bewertung des Vertrags und Entscheidung über
   S2/S3.
 
-## 10. Genau ein nächster menschlicher Entscheid
+## 10. Menschliche Entscheidung und nächster Schritt
 
-Soll dieser Pilotvertrag als ausreichende Grundlage für eine spätere
-S2-/S3-Validierung weitergeführt werden, oder soll er wegen zusätzlicher
-Komplexität, unklarer Felder oder fehlendem Praxisnutzen verworfen bzw. reduziert
-werden?
+**Freigabe erteilt:** Der Pilotvertrag wird als ausreichende Grundlage für den
+späteren S2-Slice weitergeführt.
+
+Diese Freigabe setzt keine Figma-Capability, keine externe Integration und
+keine Schreibberechtigung frei. S2 bleibt bis zur gesonderten Klärung und
+Freigabe eines konkreten read-only-Figma-Integrationswegs gesperrt.
+
+**Genau ein nächster Schritt:** Eine konkrete read-only-Figma-Capability mit
+Scope, Berechtigung, Datenklasse und Abnahme für S2 festlegen.

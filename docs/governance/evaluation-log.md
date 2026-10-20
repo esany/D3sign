@@ -89,7 +89,7 @@ neue Reihenfolge.
 | E-070 | 2026-08-04 | Standprüfung V5 gegen Kriterien, Lean-Nutzen und Komponenten-Best-Practice | Kurzprüfung | nicht bestanden / begrenzt verwertbar | V5 als Befundträger behalten, aber nicht als bestandene Button-Komponente oder finales Doku-Template nutzen; nächster Schritt bleibt ein reiner V6-Komponentenbau ohne Dokumentationsflächen. |
 | E-071 | 2026-10-20 | Vorläufiger Wiki-Freeze wegen Pflege- und Kontextaufwand | Systembefund | umgesetzt mit Nacharbeit | Wiki-Relevanz später an einem konkreten Nutzungsszenario prüfen; bis dahin keine Routinepflege und keine Verlagerung in GitHub Wiki. |
 | E-072 | 2026-10-20 | Repository-first Research und Konzeptansatz für Designer-QA-Unterstützung | Systembefund | Vorschlag dokumentiert | Zuerst den im Review-Artefakt gesicherten systemischen Architekturabgleich (Quellen-/Statusmatrix, Rollen-/Arbeitsteilungsvertrag, aktive/historische Pfade, Migrations- und Ablöseplan) menschlich bewerten; erst danach darf ein read-only QA-Fall die Zielarchitektur validieren. |
-| E-073 | 2026-10-20 | Dev-ready Planung für das Designer-Assistenzsystem | Systembefund | Vorschlag dokumentiert | Den S1-Pilotvertrag menschlich bewerten und über Weiterführung, Reduktion oder Verwerfung entscheiden; erst danach S2/S3 als neuen Umsetzungsschritt freigeben. |
+| E-073 | 2026-10-20 | Dev-ready Planung für das Designer-Assistenzsystem | Systembefund | Vorschlag dokumentiert | S1 ist als Grundlage weitergeführt; vor S2 muss eine konkrete read-only-Figma-Capability mit Integrationsfreigabe festgelegt werden. |
 
 **Redaktioneller Hinweis (2026-07-28):** E-038 trägt den zuvor doppelt als
 E-030 geführten Befund zur Regelpflege und Statussynchronisation. Die Kennung
@@ -2789,6 +2789,10 @@ Vergleichsmatrix, Evidenz und Grenzen bleiben im verlinkten Befund.
   Runtime, kein SDK, kein MCP-Server, keine Figma-Capability, keine Wiki-
   Änderung und keine automatische fachliche oder Accessibility-Abnahme.
 - **Ergebnis:** `Pilot dokumentiert`.
-- **Genau ein nächster Schritt:** Den Pilotvertrag menschlich bewerten und
-  über Weiterführung, Reduktion oder Verwerfung entscheiden. Erst danach darf
-  S2 oder S3 als neuer Umsetzungsschritt beauftragt werden.
+- **Menschliche Entscheidung:** Freigabe erteilt; der Pilotvertrag wird als
+  Grundlage für den späteren S2-Slice weitergeführt.
+- **Freigabegrenze:** Diese Entscheidung setzt keine Figma-Capability, keine
+  externe Integration und keine Schreibberechtigung frei.
+- **Genau ein nächster Schritt:** Eine konkrete read-only-Figma-Capability mit
+  Scope, Berechtigung, Datenklasse und Abnahme für S2 festlegen. Bis dahin
+  bleibt S2 gesperrt.
