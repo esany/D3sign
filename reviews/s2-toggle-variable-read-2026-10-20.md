@@ -7,6 +7,10 @@ Abrufs. Er verwendet den bestehenden S1-Vertrag und die vorhandene semantische
 Struktur. Er erzeugt keine neue Befundlogik und ersetzt keine menschliche
 Designentscheidung.
 
+**Arbeitsstand:** Historische S2-Evidenz. Dieser Befund ist kein aktueller
+Arbeitsweg und kein kanonisches Auditformat; seine Beobachtungen bleiben als
+Nachweis für E-073/E-074 erhalten.
+
 | Feld | Befund |
 |---|---|
 | Nutzungsebene | `Systementwicklung` mit fachlicher Nutzung als getrennte Wirkungsebene |

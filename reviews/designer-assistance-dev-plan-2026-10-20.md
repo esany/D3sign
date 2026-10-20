@@ -8,6 +8,11 @@ implementierbare Zielarchitektur und einen begrenzten Umsetzungspfad. Er ist
 keine neue Decision, keine bestätigte Regel und kein Auftrag, Figma oder eine
 neue Infrastruktur zu verändern.
 
+**Aktualitätsvermerk:** Der Plan bleibt Vorschlags- und Referenzquelle. Die
+früheren S0–S2-Umsetzungsschnitte sind historische Planungspfade; der aktuelle
+Arbeitsstand wird durch E-074/E-075 und die dort vorgeschlagene Status- und
+Quellenkonsolidierung bestimmt.
+
 | Feld | Einordnung |
 |---|---|
 | Ziel | Die vorhandene Governance und Arbeitsteilung in einen dev-ready, prüfbaren Arbeitsablauf für Designer:innen überführen. |

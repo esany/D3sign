@@ -298,3 +298,21 @@ oder zu verwerfen?
 
 Bis zu dieser Entscheidung bleiben die Anforderungen und Akzeptanzkriterien
 ein repo-basierter, dev-ready Vorschlag und keine neue globale Regel.
+
+## 11. Status- und Quellenbereinigung nach Ausführung
+
+Die Arbeitsstandmarkierungen wurden nur dort ergänzt, wo der spätere
+Repository-Stand den Status eindeutig einordnet:
+
+- S0-Reconciliation bleibt historischer Begründungsnachweis;
+- der S2-Capability-Readiness-Text bleibt ein historischer Kandidat und kein
+  aktiver Arbeitsweg;
+- beide Toggle-S2-Dateien bleiben historische Evidenz und werden nicht als
+  kanonisches Auditformat fortgeführt;
+- der Dev-ready Plan bleibt Vorschlagsquelle, seine S0–S2-Pfade werden aber
+  nicht als aktuelle Ausführungsroadmap behandelt.
+
+Die Decision-Status D-009 bis D-016 sowie D-019 wurden nicht verändert. Ihre
+Disposition bleibt eine menschliche Entscheidung. Die Wiki bleibt im
+vorläufigen Freeze aus E-071. Der Issue-Abgleich ergab weiterhin keine offenen
+Issues; es wurde keine externe Mutation ausgeführt.

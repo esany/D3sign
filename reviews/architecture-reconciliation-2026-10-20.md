@@ -7,6 +7,10 @@ Dieser Befund ist ein unverbindlicher Systementwicklungsbefund im Modus
 Rollen und Pfade für die weitere Umsetzung. Er setzt keine neue Regel und ist
 keine Freigabe für Code, Figma-Schreiben oder neue Infrastruktur.
 
+**Arbeitsstand:** Historischer S0-Reconciliation-Befund. Die aktuelle
+Quellen-, Status- und Pfadbereinigung wird in E-074/E-075 fortgeführt; dieser
+Befund bleibt als Begründungs- und Migrationsnachweis erhalten.
+
 | Feld | Einordnung |
 |---|---|
 | Ziel | Quellenautorität, Rollenvertrag, aktive/historische Pfade und Migrationsgrenzen vor S1 klären. |

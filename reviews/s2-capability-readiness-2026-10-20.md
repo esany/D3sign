@@ -6,6 +6,10 @@ Dieses Artefakt ist ein begrenzter Readiness-Pilot im Modus `Pilot`. Es
 bereitet genau eine read-only-Figma-Capability für S2 vor, führt sie aber nicht
 aus und erteilt keine Integrations- oder Datenfreigabe.
 
+**Arbeitsstand:** Historischer Capability-Kandidat. Er ist nicht der aktuelle
+Arbeitsweg und wird bis zu einer späteren, gesonderten Freigabe nicht weiter
+ausgebaut.
+
 | Feld | Einordnung |
 |---|---|
 | Ziel | Einen einzelnen, eng begrenzten Figma-Lesepfad für S2 prüfbar vorbereiten. |

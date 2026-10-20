@@ -91,6 +91,7 @@ neue Reihenfolge.
 | E-072 | 2026-10-20 | Repository-first Research und Konzeptansatz für Designer-QA-Unterstützung | Systembefund | Vorschlag dokumentiert | Zuerst den im Review-Artefakt gesicherten systemischen Architekturabgleich (Quellen-/Statusmatrix, Rollen-/Arbeitsteilungsvertrag, aktive/historische Pfade, Migrations- und Ablöseplan) menschlich bewerten; erst danach darf ein read-only QA-Fall die Zielarchitektur validieren. |
 | E-073 | 2026-10-20 | Dev-ready Planung für das Designer-Assistenzsystem | Systembefund | Vorschlag dokumentiert | Die sechs realen Toggle-Varianten und ihre sichtbaren Definitionen sind gesichert; der Designer entscheidet als Nächstes zwischen fachlicher Bewertung und gezielter Collection-/Mode-/Property-Evidenz. |
 | E-074 | 2026-10-20 | Tiefenaudit, Anforderungsableitung und Operationalisierung | Systembefund | Vorschlag dokumentiert | Den Gate-basierten Arbeitsvertrag menschlich annehmen oder zurückweisen; erst danach D-009–D-016 und D-019/E-071 einzeln statusbereinigen. |
+| E-075 | 2026-10-20 | Quellen-, Status- und Pfadbereinigung | Systembefund | Vorschlag dokumentiert | Den vorgeschlagenen Status- und Quellenvertrag menschlich annehmen oder zurückweisen; bis dahin bleiben Decision-Status unverändert und die S2-/Roadmap-Pfade historisch eingeordnet. |
 
 **Redaktioneller Hinweis (2026-07-28):** E-038 trägt den zuvor doppelt als
 E-030 geführten Befund zur Regelpflege und Statussynchronisation. Die Kennung
@@ -2921,3 +2922,35 @@ Vergleichsmatrix, Evidenz und Grenzen bleiben im verlinkten Befund.
 - **Genau ein nächster menschlicher Entscheid:** Soll der vorgeschlagene
   Gate-basierte Arbeitsvertrag als Konsolidierungsgrundlage angenommen werden,
   bevor D-009–D-016 und D-019/E-071 einzeln statusbereinigt werden?
+
+### E-075 – Quellen-, Status- und Pfadbereinigung
+
+- **Evidenz- und Toolingstatus:** Modus `Vorschlag` mit kontrolliertem
+  Repository-Rückfluss, Nutzungsebene `Systementwicklung` mit getrennter
+  fachlicher Designerwirkung, Rollen `Architecture`, `Governance` und
+  `Review`. Es wurden nur bestehende Repository-Quellen, die Git-Historie und
+  der bereits ausgeführte Issue-Read-only-Abgleich verwendet. Figma wurde nicht
+  aufgerufen.
+- **Gesicherter Bereinigungsbefund:** S0-Reconciliation bleibt historischer
+  Begründungsnachweis; der S2-Capability-Readiness-Text ist ein historischer
+  Kandidat; die beiden Toggle-S2-Dateien sind historische Evidenz und kein
+  aktuelles Auditformat; der Dev-ready Plan bleibt Vorschlagsquelle, seine
+  S0–S2-Pfade sind keine aktuelle Ausführungsroadmap.
+- **Nicht verändert:** Die Decision-Status D-009 bis D-016 und D-019 wurden
+  nicht automatisch geändert. E-071 bleibt der aktuelle vorläufige
+  Wiki-Freeze. Keine Figma-, Token-, Komponenten-, Runtime- oder Wiki-
+  Änderung wurde ausgeführt.
+- **Issue-/PR-Stand:** Es gibt keine offenen GitHub-Issues. PR #1 ist gemergt
+  und geschlossen. Es wurde kein Issue geschlossen, neu angelegt oder
+  umetikettiert.
+- **Repo-first-Rückfluss:** Der aktualisierte Bereinigungsbefund steht in
+  [`reviews/repo-deep-audit-and-operationalization-2026-10-20.md`](../../reviews/repo-deep-audit-and-operationalization-2026-10-20.md).
+  Die Arbeitsstandvermerke stehen zusätzlich in den betroffenen S0-, S2- und
+  Dev-ready-Reviewdateien.
+- **Bewusst nicht übernommen:** Keine automatische Bestätigung offener
+  Decisions, keine Löschung historischer Nachweise, keine neue Statusdatei,
+  keine parallele Auditstruktur und keine externe Issue-Mutation.
+- **Ergebnis:** `Vorschlag dokumentiert; Statusbereinigung vorbereitet`.
+- **Genau ein nächster menschlicher Entscheid:** Soll die vorgeschlagene
+  Quellen- und Statusmatrix als verbindliche Grundlage angenommen werden,
+  bevor D-009–D-016 und D-019/E-071 einzeln entschieden werden?

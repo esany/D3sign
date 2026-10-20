@@ -8,6 +8,10 @@ Er ist ein begrenzter, reversibler Read-only-Pilot. Er ändert weder Figma noch
 den bestehenden Komponenten- oder Tokenvertrag und ersetzt keine fachliche
 Bewertung durch den Designer.
 
+**Arbeitsstand:** Historische S2-Evidenz. Dieser Befund ist kein aktueller
+Arbeitsweg und kein kanonisches Auditformat; seine Beobachtungen bleiben als
+Nachweis für E-073/E-074 erhalten.
+
 | Feld | Befund |
 |---|---|
 | Nutzungsebene | `Systementwicklung` mit getrennter fachlicher Wirkung |
