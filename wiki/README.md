@@ -1,5 +1,12 @@
 # Projekt-Wiki
 
+> **Status: Pflege pausiert.** Diese Wiki bleibt als bestehender Kontext
+> erhalten, ist derzeit aber keine verbindliche Quelle und wird nicht bei
+> Routineänderungen fortgeschrieben. Verbindliche Regeln stehen in
+> [`AGENTS.md`](../AGENTS.md) und [`docs/`](../docs/README.md). Detailseiten
+> werden nur bei ausdrücklichem Wiki-Auftrag oder einer gezielten
+> Relevanzprüfung gelesen.
+
 Diese Wiki ist der Einstieg für Menschen. Sie erklärt, **warum** das Projekt
 so aufgebaut ist, **wo es steht** und **was bei Entscheidungen zu bewerten
 ist**. Sie ist keine zweite Fassung der operativen Regeln unter `docs/`.
