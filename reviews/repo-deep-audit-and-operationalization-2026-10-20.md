@@ -4,9 +4,10 @@
 
 Dieser Befund ist ein repo-basierter Systementwicklungsbefund im Modus
 `Umsetzen innerhalb bestätigter Regeln mit offenem Entscheidungsrückfluss`.
-Er führt die bestätigte Konsolidierungsentscheidung D-037 aus. Einzelne
-fachliche Statuswechsel bleiben davon getrennt und werden nicht stillschweigend
-vorweggenommen.
+Er führt die bestätigte Konsolidierungsentscheidung D-037 aus und wurde durch
+den Chat-Audit vom 2026-10-21 fortgeschrieben. D-009, D-010 und D-013 bis D-016
+sind als durch ihre verbindlichen Zielquellen abgelöst dokumentiert; D-011,
+D-012 sowie D-019/E-071 behalten ihre getrennte Einordnung.
 
 | Feld | Befund |
 |---|---|
@@ -17,7 +18,7 @@ vorweggenommen.
 | Rolle | `Architecture`, `Governance`, `Review`, mit Designfokus |
 | Gelesene Funktionen | gezielte Repository-Suche, Quellenabgleich, Git-Historie, öffentlicher GitHub-Issue-Read-only-Abruf |
 | Nicht ausgeführt | kein Figma-Aufruf, keine Figma-/Token-/Komponentenänderung, keine Wiki-Pflege, keine neue Runtime, keine Issue-Mutation |
-| Ergebnisstatus | `freigegeben zur Konsolidierung`; Einzel- und Regelstatus bleiben dort offen, wo eine eigene fachliche Entscheidung erforderlich ist |
+| Ergebnisstatus | `Konsolidierung ausgeführt`; offene und historische Arbeitsstände bleiben getrennt sichtbar |
 
 ## 1. Kernbefund
 
@@ -42,8 +43,8 @@ Die Hauptschwäche liegt nicht in fehlenden weiteren Tools. Sie liegt darin,
 dass bereits vorhandene Regeln und Anforderungen noch nicht überall als ein
 einziger ausführbarer Pfad gelten:
 
-1. D-009 bis D-016 sind formal `Entwurf`, werden aber praktisch als Regeln
-   referenziert.
+1. D-009 bis D-016 wurden formal bereinigt: D-009, D-010 und D-013 bis D-016
+   sind abgelöst; D-011 bleibt `Entwurf`, D-012 ist historische Roadmap.
 2. D-019 und E-071 bilden einen sichtbaren Statuskonflikt für die Wiki-Pflege.
 3. Base-Template-Stufen, S0–S2-Reviews und historische Figma-Piloten werden
    nebeneinander gelesen, obwohl sie unterschiedliche Reife- und
@@ -137,7 +138,7 @@ Operationalisierung, nicht Neuerfindung.
 
 | Pfad | Befund | Behandlung im Audit |
 |---|---|---|
-| D-009 bis D-016 | Als Entwurf geführt, aber praktisch mehrfach referenziert | Statusdrift als zentrale Architekturentscheidung markieren; keine automatische Bestätigung |
+| D-009 bis D-016 | Historisch als Entwurf geführt, aber praktisch mehrfach referenziert | Durch den Chat-Audit bereinigt: D-009, D-010 und D-013 bis D-016 sind `abgelöst`; D-011 bleibt offen, D-012 historisch |
 | D-019 / E-071 | Bestätigte Wiki-Entscheidung und aktueller vorläufiger Freeze nicht abschließend reconciliert | Konflikt sichtbar halten; keine Wiki-Reaktivierung |
 | Base Template v0.1/v0.2/v0.3 | Historische Entwicklungsstaffelung neben späterem S0–S6-Zielbild | nicht als aktuelle Lieferroadmap behandeln |
 | `s2-toggle-variable-read` / `s2-toggle-variant-audit` | Überlappende S2-Befunde; Rohwerte und Variantstruktur wurden getrennt dokumentiert, aber noch nicht in einen entscheidungsfähigen Realfall überführt | als historische Evidenz behalten; nicht als allgemeines Auditmuster weiterverbreiten |
@@ -294,8 +295,8 @@ Figma, Tokens, Komponenten und externe Toolkonfigurationen.
 
 Die Gate-basierte Konsolidierungsgrundlage ist durch D-037 bestätigt. Die
 Anforderungen und Akzeptanzkriterien sind damit als Arbeitsgrundlage
-freigegeben; einzelne Decision-Status bleiben offen, wenn sie eine eigene
-fachliche Begründung oder Ablösung benötigen.
+freigegeben. Die im Chat-Audit eindeutig zuordenbaren Statusänderungen sind
+übernommen; offene und historische Einordnungen bleiben ausdrücklich sichtbar.
 
 ## 11. Status- und Quellenbereinigung nach Ausführung
 
@@ -310,29 +311,30 @@ Repository-Stand den Status eindeutig einordnet:
 - der Dev-ready Plan bleibt Vorschlagsquelle, seine S0–S2-Pfade werden aber
   nicht als aktuelle Ausführungsroadmap behandelt.
 
-Die Decision-Status D-009 bis D-016 sowie D-019 wurden nicht verändert. Ihre
-Disposition bleibt eine menschliche Entscheidung. Die Wiki bleibt im
-vorläufigen Freeze aus E-071. Der Issue-Abgleich ergab weiterhin keine offenen
-Issues; es wurde keine externe Mutation ausgeführt.
+Die Decision-Status D-009, D-010 und D-013 bis D-016 wurden am 2026-10-21 auf
+`abgelöst` gesetzt und verweisen auf ihre verbindlichen Zielquellen. D-011
+bleibt `Entwurf`; D-012 bleibt Entwurf und ist als historische Roadmap
+markiert. D-019 bleibt `bestätigt`; E-071 hält den vorläufigen Wiki-Freeze.
+Der Issue-Abgleich ergab weiterhin keine offenen Issues; es wurde keine
+externe Mutation ausgeführt.
 
 ## 12. Einzel-Dispositionen für D-009 bis D-016
 
-Die folgende Matrix ist durch D-037 als Arbeitsgrundlage freigegeben. Sie
-ändert die Einzelstatus im Decision Log noch nicht.
+Die folgende Matrix ist durch D-037 als Arbeitsgrundlage freigegeben. Die
+Statusübernahme des Chat-Audits ist im Decision Log dokumentiert.
 
 | Decision | Aktuelle Einordnung | Tatsächliche Zielquelle | Vorgeschlagene Disposition | Begründung und Folge |
 |---|---|---|---|---|
-| D-009 Rollen | Entwurf, praktisch in `AGENTS.md`, Prompting Guide und Role Needs verwendet | `AGENTS.md` plus `docs/governance/role-needs-and-user-stories.md` | `zusammenführen` | Die Schutzwirkung ist aktiv; die Decision darf nicht parallel als eigenständige Regel fortbestehen. Einzelstatus bleibt bis zur Statusentscheidung sichtbar. |
-| D-010 Transparenz | Entwurf, praktisch in Transparenzpflicht, Base Template und Checklists verwendet | `AGENTS.md`, `docs/governance/base-template.md`, `docs/governance/evaluation-framework.md` | `zusammenführen` | Die Pflichtfelder und Rollenklärung existieren bereits; der offene Status erzeugt Statusdrift. |
+| D-009 Rollen | abgelöst; praktisch in `AGENTS.md`, Prompting Guide und Role Needs verankert | `AGENTS.md` plus `docs/governance/role-needs-and-user-stories.md` | `abgelöst` | Die Schutzwirkung ist in den Zielquellen verankert; kein paralleler Einzelstatus bleibt erforderlich. |
+| D-010 Transparenz | abgelöst; praktisch in Transparenzpflicht, Base Template und Checklists verankert | `AGENTS.md`, `docs/governance/base-template.md`, `docs/governance/evaluation-framework.md` | `abgelöst` | Die Pflichtfelder und Rollenklärung sind in den Zielquellen verankert. |
 | D-011 Library-Grundbaustein | Entwurf, als generischer Foundation-Rahmen weiterhin relevant | `docs/governance/base-template.md`, `docs/foundations/` | `als Entwurf offen halten` | Der Grundbaustein bleibt Vorschlags-/Foundationmaterial und ist kein konkretes Projektziel. |
 | D-012 Ausbaustufen | Entwurf mit historischer v0.1/v0.2/v0.3-Staffelung | `reviews/designer-assistance-dev-plan-2026-10-20.md` und E-074/E-075 | `historisch markieren` | Die alte Roadmap darf nicht parallel als aktuelle Lieferplanung gelesen werden. |
-| D-013 Toolwahl | Entwurf, praktisch in `AGENTS.md`, Prompting Guide und Tooling Map verwendet | `AGENTS.md`, `docs/operations/prompting-guide.md`, `docs/tooling/tooling-map.md` | `zusammenführen` | Toolwahl und Scope sind bereits ausführbar geregelt; die Capability bleibt fallbezogen. |
-| D-014 Evidenzstatus | Entwurf, praktisch im Evaluation Framework und in jedem neueren Befund verwendet | `AGENTS.md`, `docs/governance/evaluation-framework.md`, `docs/operations/workflows.md` | `zusammenführen` | Evidenz vor Ableitung ist aktive Arbeitslogik; der Status muss mit der Quelle synchronisiert werden. |
-| D-015 Regelkandidaten | Entwurf, praktisch über `REGEL SETZEN` und AGENTS-Governance verwendet | `AGENTS.md`, `docs/governance/decisions.md` | `zusammenführen` | Die Schutzwirkung bleibt erhalten; automatische Regelsetzung bleibt ausgeschlossen. |
-| D-016 Delta-Nachweis | Entwurf, praktisch durch `Status sichern` und Evaluation angewendet | `AGENTS.md`, `docs/governance/evaluation-log.md` | `zusammenführen` | Der Delta-Nachweis ist Teil des bestehenden Rückflusses; keine zusätzliche Statusablage nötig. |
+| D-013 Toolwahl | abgelöst; praktisch in `AGENTS.md`, Prompting Guide und Tooling Map verankert | `AGENTS.md`, `docs/operations/prompting-guide.md`, `docs/tooling/tooling-map.md` | `abgelöst` | Toolwahl und Scope sind bereits ausführbar geregelt; die Capability bleibt fallbezogen. |
+| D-014 Evidenzstatus | abgelöst; praktisch im Evaluation Framework und in neueren Befunden verankert | `AGENTS.md`, `docs/governance/evaluation-framework.md`, `docs/operations/workflows.md` | `abgelöst` | Evidenz vor Ableitung ist aktive Arbeitslogik. |
+| D-015 Regelkandidaten | abgelöst; praktisch über `REGEL SETZEN` und AGENTS-Governance verankert | `AGENTS.md`, `docs/governance/decisions.md` | `abgelöst` | Die Schutzwirkung bleibt erhalten; automatische Regelsetzung bleibt ausgeschlossen. |
+| D-016 Delta-Nachweis | abgelöst; praktisch durch `Status sichern` und Evaluation verankert | `AGENTS.md`, `docs/governance/evaluation-log.md` | `abgelöst` | Der Delta-Nachweis ist Teil des bestehenden Rückflusses; keine zusätzliche Statusablage nötig. |
 
-Für D-009, D-010 und D-013 bis D-016 ist der nächste fachliche Schritt eine
-gebündelte Statusentscheidung über Zusammenführung und Ablösung der
-historischen Einzelentries. D-011 bleibt bis zur gesonderten Foundation-
-Bewertung offen. D-012 wird als historische Roadmap markiert, ohne die
-Entwicklungsgeschichte zu löschen.
+Die Ablösung von D-009, D-010 und D-013 bis D-016 ist im Decision Log
+fortgeschrieben. D-011 bleibt bis zur gesonderten Foundation-Bewertung offen.
+D-012 wird als historische Roadmap markiert, ohne die Entwicklungsgeschichte
+zu löschen. D-019 und E-071 bleiben unverändert.

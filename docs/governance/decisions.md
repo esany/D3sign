@@ -28,14 +28,14 @@ Eintrag fortgeschrieben; kein doppelter Eintrag für dieselbe Entscheidung.
 | D-006 | Entwurf | Figma-Kontext | Repository, Figma, Code und Wiki tragen getrennte, verlinkte Kontextverantwortung; v0.2 prüft dies read-only. |
 | D-007 | abgelöst | Entwicklungsmodus | Der frühere projektnahe Vertikalschnitt wird durch den generischen Library-Fokus von D-011 abgelöst. |
 | D-008 | Entwurf | KI-Tooling-Tests | Tests bleiben isoliert und ergebnisoffen; Übernahme ins Zielsystem braucht menschliche Freigabe. |
-| D-009 | Entwurf | Arbeitsrollen | Rollen steuern Perspektive und Output, nicht Entscheidungsbefugnis. |
-| D-010 | Entwurf | Transparenz und Selbsterklärung | Automatik, menschliche Steuerung und offene Entscheidungen werden in jedem relevanten Befund getrennt ausgewiesen. |
+| D-009 | abgelöst | Arbeitsrollen | Durch `AGENTS.md` und die zuständigen Governance-/Rollenquellen abgelöst; Rollen steuern Perspektive und Output, nicht Entscheidungsbefugnis. |
+| D-010 | abgelöst | Transparenz und Selbsterklärung | Durch `AGENTS.md`, Base Template, Checklists und Evaluation abgelöst; Automatik, menschliche Steuerung und offene Entscheidungen bleiben getrennt ausgewiesen. |
 | D-011 | Entwurf | Generischer Design-System-Grundbaustein | v0.1 fokussiert Library-Regeln und isolierte Tooling-Tests; Projektkits und Entwurfsdateien bleiben Zielbild. |
 | D-012 | Entwurf | Ausbaustufen | v0.1 bleibt Regelgrundlage; v0.2 prüft read-only Tooling mit externen Testfixtures. |
-| D-013 | Entwurf | Agentenverantwortung für Toolwahl und Prompting | Der Agent wählt die passendste und tokensparende Funktion sowie den passenden Systemprompt; Einschränkungen werden nicht stillschweigend vorgenommen. |
-| D-014 | Entwurf | Evidenz vor fachlicher Ableitung | Jeder Evaluationsbefund weist zuerst Tooling-Scope, sichtbare und nicht sichtbare Informationen sowie Evidenzgrenzen aus; erst danach folgen fachliche Bewertungen. |
-| D-015 | Entwurf | Regelkandidaten und explizite Regelsetzung | Der Agent erkennt mögliche wiederverwendbare Regeln selbst, setzt sie aber nicht stillschweigend; bei Unsicherheit fragt er gezielt nach. `REGEL SETZEN` ist die explizite menschliche Anweisung. |
-| D-016 | Entwurf | Delta-Nachweis bei „Status sichern“ | Jeder Sicherungslauf weist konkret aus, was neu gesichert, geändert, nicht übernommen und offen geblieben ist. |
+| D-013 | abgelöst | Agentenverantwortung für Toolwahl und Prompting | Durch `AGENTS.md`, Prompting Guide und Tooling Map abgelöst; der Agent wählt die passendste Funktion und weist Einschränkungen aus. |
+| D-014 | abgelöst | Evidenz vor fachlicher Ableitung | Durch `AGENTS.md`, Evaluation Framework und Workflows abgelöst; Evidenzstatus und Grenzen stehen vor fachlichen Ableitungen. |
+| D-015 | abgelöst | Regelkandidaten und explizite Regelsetzung | Durch `AGENTS.md` und Decision Log abgelöst; `REGEL SETZEN` bleibt die ausdrückliche menschliche Anweisung. |
+| D-016 | abgelöst | Delta-Nachweis bei „Status sichern“ | Durch `AGENTS.md` und Evaluation Log abgelöst; jeder Sicherungslauf weist das konkrete Delta aus. |
 | D-017 | bestätigt | Aktive Ziel-, Lean- und Proportionalitätsprüfung | Der Agent prüft vor Zustimmung oder Erweiterung aktiv Zielbeitrag, Wiederverwendung, Leanheit, Operationalisierbarkeit und Tokenaufwand und weist auf Overhead oder Zielabweichung hin. |
 | D-018 | bestätigt | Menschlich verständlicher `PROMPT`-/`AUSFÜHREN`-Ablauf | `PROMPT` klärt Auftrag, Scope, Toolwahl und Grenzen; erst `AUSFÜHREN` startet die bestätigte Aktion. |
 | D-019 | bestätigt | Menschenzentrierte Wiki und `WIKI PRÜFEN` | Die Wiki vermittelt ohne Vorwissen; der Befehl prüft regelmäßig Informationsarchitektur, Verständlichkeit, Arbeitsteilung und kognitive Last. |
@@ -68,12 +68,12 @@ verbindliche Regelsetzung.
 
 | Regelkandidat oder Decision | Dokumentierter Status | Praktisch referenziert in | Nächste Klärung |
 |---|---|---|---|
-| D-009 | Entwurf | `AGENTS.md`, Prompting Guide, Wiki | Rollenregel praktisch validieren oder mit `REGEL SETZEN` bestätigen |
-| D-010 | Entwurf | `AGENTS.md`, Base Template, Checklists, Evaluation | Transparenzregel praktisch validieren oder mit `REGEL SETZEN` bestätigen |
-| D-013 | Entwurf | `AGENTS.md`, Prompting Guide, Tooling Map | Toolwahlregel validieren oder mit `REGEL SETZEN` bestätigen |
-| D-014 | Entwurf | `AGENTS.md`, Evaluation Framework, Evaluation Log | Evidenzreihenfolge validieren oder mit `REGEL SETZEN` bestätigen |
-| D-015 | Entwurf | `AGENTS.md`, Quick Controls, Wiki | Regelkandidatenprozess validieren oder mit `REGEL SETZEN` bestätigen |
-| D-016 | Entwurf | `AGENTS.md`, Quick Controls, Evaluation Log | Delta-Nachweis validieren oder mit `REGEL SETZEN` bestätigen |
+| D-009 | abgelöst | `AGENTS.md`, Prompting Guide, Role Needs | Keine separate Regelsetzung; Schutzwirkung ist in den Zielquellen verankert. |
+| D-010 | abgelöst | `AGENTS.md`, Base Template, Checklists, Evaluation | Keine separate Regelsetzung; Transparenzpflicht ist in den Zielquellen verankert. |
+| D-013 | abgelöst | `AGENTS.md`, Prompting Guide, Tooling Map | Keine separate Regelsetzung; Toolwahl bleibt fallbezogen und begrenzt. |
+| D-014 | abgelöst | `AGENTS.md`, Evaluation Framework, Workflows | Keine separate Regelsetzung; Evidenzreihenfolge ist in den Zielquellen verankert. |
+| D-015 | abgelöst | `AGENTS.md`, Decision Log | Keine separate Regelsetzung; `REGEL SETZEN` bleibt erhalten. |
+| D-016 | abgelöst | `AGENTS.md`, Evaluation Log | Keine separate Regelsetzung; Delta-Nachweis bleibt im Sicherungsabschluss erhalten. |
 | Evaluation-Log-ID-Abgleich | Regelkandidat | E-038 | Read-only-Test erfolgreich; menschlich entscheiden, ob übernehmen, als Pilot fortführen oder verwerfen. |
 | Status-Sinnabgleich | Regelkandidat | E-039 | An einem folgenreichen Sicherungslauf prüfen; erst danach Übernahme, Pilot oder Verwerfung entscheiden. |
 | Kontextstart und Wiederaufnahme | Regelkandidat | E-041, E-045 | An vier Startarten auf Kontextverlust, Auffindbarkeit, Ebenentrennung und Aufwand prüfen; erst danach Übernahme, Pilot oder Verwerfung entscheiden. |
@@ -232,7 +232,7 @@ als bestätigt ausgeben.
 ### D-009 – Rollen als sichtbarer Arbeitskontext
 
 - **Datum:** 2026-07-23
-- **Status:** Entwurf – mit dem ersten Rollenauftrag prüfen
+- **Status:** abgelöst durch `AGENTS.md` und die zuständigen Governance-/Rollenquellen am 2026-10-21
 - **Geltungsbereich:** Aufträge an Agenten sowie menschliche Review- und
   Übergabesituationen.
 - **Entscheidung:** Aufträge können die Perspektive `Design`, `Development`,
@@ -248,7 +248,7 @@ als bestätigt ausgeben.
 ### D-010 – Transparenz als Systemanforderung
 
 - **Datum:** 2026-07-23
-- **Status:** Entwurf – am ersten dritten Nutzer bzw. Test prüfen
+- **Status:** abgelöst durch `AGENTS.md`, Base Template, Checklists und Evaluation am 2026-10-21
 - **Geltungsbereich:** Agentenbefunde, Test- und Entwicklungsabschlüsse sowie
   menschliche Wiki-Einordnung.
 - **Entscheidung:** Jeder relevante Befund weist Arbeitsmodus, Rolle, Quellen,
@@ -287,6 +287,7 @@ als bestätigt ausgeben.
 
 - **Datum:** 2026-07-23
 - **Status:** Entwurf – mit dem ersten read-only Test prüfen
+- **Einordnung:** Historische Roadmap; nicht aktueller Ausführungsweg (2026-10-21)
 - **Geltungsbereich:** Lieferumfang v0.1, KI-/Figma-Tooling-Tests und spätere
   Projektableitung.
 - **Entscheidung:** v0.1 bleibt auf generische Library-Regeln und eine
@@ -304,7 +305,7 @@ als bestätigt ausgeben.
 ### D-013 – Agentenverantwortung für Toolwahl, Prompting und transparente Einschränkungen
 
 - **Datum:** 2026-07-24
-- **Status:** Entwurf – im weiteren v0.2-Test prüfen
+- **Status:** abgelöst durch `AGENTS.md`, Prompting Guide und Tooling Map am 2026-10-21
 - **Geltungsbereich:** Alle KI-/Figma-/Design-System-Aufträge mit mehreren
   möglichen Zugriffsebenen oder begrenzten Tool- und Tokenressourcen.
 - **Entscheidung:** Der Agent bestimmt selbst die benötigte Informationsebene,
@@ -332,7 +333,7 @@ als bestätigt ausgeben.
 ### D-014 – Evidenz- und Toolingstatus vor fachlicher Ableitung
 
 - **Datum:** 2026-07-24
-- **Status:** Entwurf – im nächsten mehrstufigen Evaluationsfall prüfen
+- **Status:** abgelöst durch `AGENTS.md`, Evaluation Framework und Workflows am 2026-10-21
 - **Geltungsbereich:** Kurz- und Vollprüfungen, Tooling-Tests und ihre Wiki-
   Einordnung.
 - **Entscheidung:** Jeder Evaluationsblock beginnt mit dem Evidenz- und
@@ -353,7 +354,7 @@ als bestätigt ausgeben.
 ### D-015 – Regelkandidaten und explizite Regelsetzung
 
 - **Datum:** 2026-07-24
-- **Status:** Entwurf – im weiteren Projektgebrauch prüfen
+- **Status:** abgelöst durch `AGENTS.md` und Decision Log am 2026-10-21
 - **Geltungsbereich:** Wiederkehrende Befunde, Arbeitsmuster und mögliche neue
   Governance- oder Arbeitsregeln.
 - **Entscheidung:** Der Agent prüft selbst, ob ein Befund über den Einzelfall
@@ -373,7 +374,7 @@ als bestätigt ausgeben.
 ### D-016 – Konkreter Delta-Nachweis bei „Status sichern“
 
 - **Datum:** 2026-07-24
-- **Status:** Entwurf – beim nächsten Sicherungslauf prüfen
+- **Status:** abgelöst durch `AGENTS.md` und Evaluation Log am 2026-10-21
 - **Geltungsbereich:** Steuerbefehl `Status sichern` und seine menschliche
   Rückmeldung.
 - **Entscheidung:** Jeder Sicherungslauf endet mit den vier Delta-Feldern
@@ -913,9 +914,10 @@ als bestätigt ausgeben.
   `Arbeitsauftrag → passende Quelle/Capability → Evidenz → Befund →
   menschliche Decision → Repository-Nachweis` ist der aktuelle Arbeitsweg.
   D-009 bis D-016 werden einzeln gegen ihre tatsächlichen Quellen und
-  Schutzwirkungen bereinigt, ohne ihren Status automatisch zu erhöhen. D-019
-  bleibt als ursprüngliche Wiki-Decision sichtbar; E-071 begrenzt bis zu einer
-  eigenen Entscheidung die Routinepflege. Historische Roadmaps, S0–S2-
+  Schutzwirkungen bereinigt; abgelöste Einzelentries verweisen auf ihre
+  verbindlichen Zielquellen, offene Entries bleiben Entwurf. D-019 bleibt als
+  ursprüngliche Wiki-Decision sichtbar; E-071 begrenzt bis zu einer eigenen
+  Entscheidung die Routinepflege. Historische Roadmaps, S0–S2-
   Befunde und Capability-Kandidaten werden nicht als aktuelle Ausführungswege
   behandelt.
 - **Begründung:** Das Repository besitzt die fachlichen und operativen
@@ -926,8 +928,8 @@ als bestätigt ausgeben.
   Entscheidungsrechte an die Assistenz zu übertragen.
 - **Nicht Teil der Entscheidung:** Keine neue Runtime, keine Figma- oder
   Tokenänderung, keine automatische semantische Bewertung, keine
-  Wiki-Reaktivierung, keine automatische Bestätigung von D-009 bis D-016 und
-  keine Issue-Erzeugung.
+  Wiki-Reaktivierung, keine automatische Bestätigung der weiterhin offenen
+  Entries und keine Issue-Erzeugung.
 - **Betroffene Artefakte:** `AGENTS.md`, `docs/README.md`,
   `docs/governance/decisions.md`, `docs/governance/evaluation-log.md`,
   `docs/operations/workflows.md`, `docs/operations/checklists.md`,

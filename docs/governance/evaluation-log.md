@@ -90,8 +90,9 @@ neue Reihenfolge.
 | E-071 | 2026-10-20 | Vorläufiger Wiki-Freeze wegen Pflege- und Kontextaufwand | Systembefund | umgesetzt mit Nacharbeit | Wiki-Relevanz später an einem konkreten Nutzungsszenario prüfen; bis dahin keine Routinepflege und keine Verlagerung in GitHub Wiki. |
 | E-072 | 2026-10-20 | Repository-first Research und Konzeptansatz für Designer-QA-Unterstützung | Systembefund | historischer Vorschlag | Durch E-074/E-075 und D-037 fortgeschrieben; keine eigenständige neue Architektur daraus ableiten. |
 | E-073 | 2026-10-20 | Dev-ready Planung für das Designer-Assistenzsystem | Systembefund | historischer Planungsstand | S2-/Toggle-Anschlussaktionen sind durch E-074/E-075 und D-037 eingeordnet; kein aktueller Figma-Ausführungspfad. |
-| E-074 | 2026-10-20 | Tiefenaudit, Anforderungsableitung und Operationalisierung | Systembefund | freigegeben zur Konsolidierung | D-037 bestätigt die Konsolidierungsgrundlage; Einzelstatus D-009–D-016 und D-019/E-071 bleiben getrennte Anschlussentscheidungen. |
-| E-075 | 2026-10-20 | Quellen-, Status- und Pfadbereinigung | Systembefund | freigegeben zur Konsolidierung | D-037 ist bestätigt; D-009–D-016 und D-019/E-071 werden entlang der freigegebenen Matrix einzeln bereinigt, ohne offene Einzelentscheidungen stillschweigend zu setzen. |
+| E-074 | 2026-10-20 | Tiefenaudit, Anforderungsableitung und Operationalisierung | Systembefund | freigegeben zur Konsolidierung | D-037 bestätigt die Konsolidierungsgrundlage; die Einzelstatus wurden im Chat-Audit nach Evidenz getrennt bereinigt. |
+| E-075 | 2026-10-20 | Quellen-, Status- und Pfadbereinigung | Systembefund | umgesetzt mit Nachweis | D-009, D-010 und D-013–D-016 sind abgelöst; D-011/D-012 sowie D-019/E-071 bleiben getrennt eingeordnet. |
+| E-076 | 2026-10-21 | Chat-Audit: Wissensmonopole und Übergabe | Systembefund | umgesetzt | Dauerhafte Inhalte sind repo-first verankert; der Anschlusskern liegt in `reviews/chat-handoff-2026-10-21.md`. |
 
 **Redaktioneller Hinweis (2026-07-28):** E-038 trägt den zuvor doppelt als
 E-030 geführten Befund zur Regelpflege und Statussynchronisation. Die Kennung
@@ -2893,9 +2894,10 @@ Vergleichsmatrix, Evidenz und Grenzen bleiben im verlinkten Befund.
 
 ### E-074 – Tiefenaudit, Anforderungsableitung und Operationalisierung
 
-> **Arbeitsstand:** Durch die Freigabe und D-037 fortgeschrieben; der
-> Gate-basierte Arbeitsvertrag ist Konsolidierungsgrundlage, während die
-> Einzel-Decision-Status offen bleiben.
+> **Arbeitsstand:** Historischer Befund vom 2026-10-20. Durch D-037, E-075
+> und E-076 fortgeschrieben; der Gate-basierte Arbeitsvertrag bleibt
+> Konsolidierungsgrundlage, die damalige Offenheit der Einzelstatus ist
+> inzwischen teilweise bereinigt.
 
 - **Evidenz- und Toolingstatus:** Modus `Vorschlag` mit kontrolliertem
   Repository-Rückfluss, Nutzungsebene `Systementwicklung` mit getrennt
@@ -2944,17 +2946,17 @@ Vergleichsmatrix, Evidenz und Grenzen bleiben im verlinkten Befund.
   der bereits ausgeführte Issue-Read-only-Abgleich verwendet. Figma wurde nicht
   aufgerufen.
 - **Freigegebene Grundlage:** D-037 bestätigt die in E-075 geprüfte Quellen-,
-  Status- und Pfadmatrix sowie den Gate-basierten Arbeitsvertrag. Die
-  Bestätigung setzt offene Einzelstatus nicht automatisch.
+  Status- und Pfadmatrix sowie den Gate-basierten Arbeitsvertrag.
 - **Gesicherter Bereinigungsbefund:** S0-Reconciliation bleibt historischer
   Begründungsnachweis; der S2-Capability-Readiness-Text ist ein historischer
   Kandidat; die beiden Toggle-S2-Dateien sind historische Evidenz und kein
   aktuelles Auditformat; der Dev-ready Plan bleibt Vorschlagsquelle, seine
   S0–S2-Pfade sind keine aktuelle Ausführungsroadmap.
-- **Nicht verändert:** Die Einzelstatus D-009 bis D-016 und D-019 wurden nicht
-  automatisch geändert. E-071 bleibt der aktuelle vorläufige Wiki-Freeze.
-  Keine Figma-, Token-, Komponenten-, Runtime- oder Wiki-Änderung wurde
-  ausgeführt.
+- **Statusrückfluss:** D-009, D-010 und D-013 bis D-016 wurden auf `abgelöst`
+  gesetzt und mit ihren verbindlichen Zielquellen verknüpft. D-011 bleibt
+  `Entwurf`; D-012 bleibt historische Roadmap; D-019 bleibt `bestätigt`.
+  E-071 bleibt der aktuelle vorläufige Wiki-Freeze. Keine Figma-, Token-,
+  Komponenten-, Runtime- oder Wiki-Änderung wurde ausgeführt.
 - **Issue-/PR-Stand:** Es gibt keine offenen GitHub-Issues. PR #1 ist gemergt
   und geschlossen. Es wurde kein Issue geschlossen, neu angelegt oder
   umetikettiert.
@@ -2965,9 +2967,31 @@ Vergleichsmatrix, Evidenz und Grenzen bleiben im verlinkten Befund.
 - **Bewusst nicht übernommen:** Keine automatische Bestätigung offener
   Decisions, keine Löschung historischer Nachweise, keine neue Statusdatei,
   keine parallele Auditstruktur und keine externe Issue-Mutation.
-- **Ergebnis:** `freigegeben zur Konsolidierung; Einzelstatus offen`.
-- **Genau ein nächster menschlicher Entscheid:** Sollen die gebündelten
-  Dispositionen für D-009, D-010 und D-013 bis D-016 als
-  Zusammenführung/Ablösung der historischen Einzelentries bestätigt werden,
-  während D-011 und D-019/E-071 als getrennte offene Felder fortgeführt
-  werden?
+- **Ergebnis:** `umgesetzt mit Nachweis; offene und historische Felder getrennt`.
+- **Genau ein nächster menschlicher Entscheid:** Welcher konkrete
+  Designerfall soll als erster Lauf nach dem Gate-Vertrag gestartet werden?
+
+### E-076 – Chat-Audit: Wissensmonopole und Übergabe
+
+- **Evidenz- und Toolingstatus:** Modus `Umsetzen innerhalb bestätigter Regeln`,
+  Nutzungsebene `Systementwicklung`, Rollen `Governance` und `Review`. Geprüft
+  wurden der bisherige Chatkontext sowie die bestehenden Repository-Quellen;
+  Figma, Wiki und externe Issues wurden nicht verändert.
+- **Prüffrage:** Welche dauerhaften Anforderungen, Entscheidungen,
+  Statusklärungen und Anschlussinformationen existieren nur im Chat und müssen
+  repo-first gesichert werden, damit ein neuer Chat ohne Transkriptmonopol
+  weiterarbeiten kann?
+- **Gesicherter Befund:** Designerrolle, Pain Points, Arbeitsteilung,
+  Gate-Vertrag und Statusklärungen sind in den verbindlichen Quellen oder im
+  Handoff verankert. D-009, D-010 und D-013 bis D-016 sind abgelöst; D-011,
+  D-012, D-019 und E-071 behalten ihre ausgewiesene Einordnung.
+- **Repo-first-Rückfluss:** Der kompakte Anschlusskern steht in
+  [`reviews/chat-handoff-2026-10-21.md`](../../reviews/chat-handoff-2026-10-21.md).
+  Der Deep-Audit und das Decision Log wurden auf den ausgeführten Statusstand
+  fortgeschrieben.
+- **Bewusst nicht übernommen:** Keine Chat-Rhetorik ohne Quellenbezug, keine
+  verworfenen Ansätze, keine generische Architektur, keine Figma-/Token-/
+  Komponentenänderung und keine Wiki-Reaktivierung.
+- **Ergebnis:** `umgesetzt`.
+- **Genau ein nächster menschlicher Entscheid:** Welcher konkrete
+  Designerfall soll als erster Lauf nach dem Gate-Vertrag gestartet werden?
